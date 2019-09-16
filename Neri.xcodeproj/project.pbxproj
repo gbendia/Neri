@@ -1,0 +1,908 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		652DF2D8232EF0360067BB01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF2D7232EF0360067BB01 /* AppDelegate.swift */; };
+		652DF2DA232EF0360067BB01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF2D9232EF0360067BB01 /* ViewController.swift */; };
+		652DF2DF232EF0380067BB01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652DF2DE232EF0380067BB01 /* Assets.xcassets */; };
+		652DF2E2232EF0380067BB01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652DF2E0232EF0380067BB01 /* LaunchScreen.storyboard */; };
+		652DF2ED232EF0380067BB01 /* NeriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF2EC232EF0380067BB01 /* NeriTests.swift */; };
+		652DF2F8232EF0380067BB01 /* NeriUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF2F7232EF0380067BB01 /* NeriUITests.swift */; };
+		652DF2FD232EF0380067BB01 /* Neri WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 652DF2FC232EF0380067BB01 /* Neri WatchKit App.app */; };
+		652DF303232EF0380067BB01 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652DF301232EF0380067BB01 /* Interface.storyboard */; };
+		652DF305232EF0380067BB01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652DF304232EF0380067BB01 /* Assets.xcassets */; };
+		652DF30C232EF0380067BB01 /* Neri WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 652DF30B232EF0380067BB01 /* Neri WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		652DF311232EF0380067BB01 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF310232EF0380067BB01 /* InterfaceController.swift */; };
+		652DF313232EF0380067BB01 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF312232EF0380067BB01 /* ExtensionDelegate.swift */; };
+		652DF315232EF0380067BB01 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF314232EF0380067BB01 /* NotificationController.swift */; };
+		652DF317232EF0390067BB01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652DF316232EF0390067BB01 /* Assets.xcassets */; };
+		652DF332232EF3690067BB01 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF331232EF3690067BB01 /* GradientView.swift */; };
+		652DF338232EFD6F0067BB01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652DF337232EFD6E0067BB01 /* Main.storyboard */; };
+		652DF34F232EFE240067BB01 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF34D232EFE240067BB01 /* InitialViewController.swift */; };
+		652DF350232EFE240067BB01 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF34E232EFE240067BB01 /* LoadingViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		652DF2E9232EF0380067BB01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 652DF2CC232EF0360067BB01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 652DF2D3232EF0360067BB01;
+			remoteInfo = Neri;
+		};
+		652DF2F4232EF0380067BB01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 652DF2CC232EF0360067BB01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 652DF2D3232EF0360067BB01;
+			remoteInfo = Neri;
+		};
+		652DF2FE232EF0380067BB01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 652DF2CC232EF0360067BB01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 652DF2FB232EF0380067BB01;
+			remoteInfo = "Neri WatchKit App";
+		};
+		652DF30D232EF0380067BB01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 652DF2CC232EF0360067BB01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 652DF30A232EF0380067BB01;
+			remoteInfo = "Neri WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		652DF31F232EF0390067BB01 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				652DF30C232EF0380067BB01 /* Neri WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652DF323232EF0390067BB01 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				652DF2FD232EF0380067BB01 /* Neri WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		652DF2D4232EF0360067BB01 /* Neri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neri.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		652DF2D7232EF0360067BB01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		652DF2D9232EF0360067BB01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		652DF2DE232EF0380067BB01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		652DF2E1232EF0380067BB01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		652DF2E3232EF0380067BB01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		652DF2E8232EF0380067BB01 /* NeriTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeriTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		652DF2EC232EF0380067BB01 /* NeriTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeriTests.swift; sourceTree = "<group>"; };
+		652DF2EE232EF0380067BB01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		652DF2F3232EF0380067BB01 /* NeriUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeriUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		652DF2F7232EF0380067BB01 /* NeriUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeriUITests.swift; sourceTree = "<group>"; };
+		652DF2F9232EF0380067BB01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		652DF2FC232EF0380067BB01 /* Neri WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Neri WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		652DF302232EF0380067BB01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		652DF304232EF0380067BB01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		652DF306232EF0380067BB01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		652DF30B232EF0380067BB01 /* Neri WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Neri WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		652DF310232EF0380067BB01 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		652DF312232EF0380067BB01 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		652DF314232EF0380067BB01 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		652DF316232EF0390067BB01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		652DF318232EF0390067BB01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		652DF319232EF0390067BB01 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		652DF331232EF3690067BB01 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		652DF337232EFD6E0067BB01 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		652DF34D232EFE240067BB01 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		652DF34E232EFE240067BB01 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		652DF2D1232EF0360067BB01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652DF2E5232EF0380067BB01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652DF2F0232EF0380067BB01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652DF308232EF0380067BB01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		652DF2CB232EF0360067BB01 = {
+			isa = PBXGroup;
+			children = (
+				652DF2D6232EF0360067BB01 /* Neri */,
+				652DF2EB232EF0380067BB01 /* NeriTests */,
+				652DF2F6232EF0380067BB01 /* NeriUITests */,
+				652DF300232EF0380067BB01 /* Neri WatchKit App */,
+				652DF30F232EF0380067BB01 /* Neri WatchKit Extension */,
+				652DF2D5232EF0360067BB01 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		652DF2D5232EF0360067BB01 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				652DF2D4232EF0360067BB01 /* Neri.app */,
+				652DF2E8232EF0380067BB01 /* NeriTests.xctest */,
+				652DF2F3232EF0380067BB01 /* NeriUITests.xctest */,
+				652DF2FC232EF0380067BB01 /* Neri WatchKit App.app */,
+				652DF30B232EF0380067BB01 /* Neri WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		652DF2D6232EF0360067BB01 /* Neri */ = {
+			isa = PBXGroup;
+			children = (
+				652DF32E232EF3370067BB01 /* Model */,
+				652DF32F232EF33E0067BB01 /* View */,
+				652DF330232EF3470067BB01 /* Controller */,
+				652DF2D7232EF0360067BB01 /* AppDelegate.swift */,
+				652DF2D9232EF0360067BB01 /* ViewController.swift */,
+				652DF337232EFD6E0067BB01 /* Main.storyboard */,
+				652DF2E0232EF0380067BB01 /* LaunchScreen.storyboard */,
+				652DF32D232EF2010067BB01 /* Resources */,
+				652DF2E3232EF0380067BB01 /* Info.plist */,
+			);
+			path = Neri;
+			sourceTree = "<group>";
+		};
+		652DF2EB232EF0380067BB01 /* NeriTests */ = {
+			isa = PBXGroup;
+			children = (
+				652DF2EC232EF0380067BB01 /* NeriTests.swift */,
+				652DF2EE232EF0380067BB01 /* Info.plist */,
+			);
+			path = NeriTests;
+			sourceTree = "<group>";
+		};
+		652DF2F6232EF0380067BB01 /* NeriUITests */ = {
+			isa = PBXGroup;
+			children = (
+				652DF2F7232EF0380067BB01 /* NeriUITests.swift */,
+				652DF2F9232EF0380067BB01 /* Info.plist */,
+			);
+			path = NeriUITests;
+			sourceTree = "<group>";
+		};
+		652DF300232EF0380067BB01 /* Neri WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				652DF301232EF0380067BB01 /* Interface.storyboard */,
+				652DF304232EF0380067BB01 /* Assets.xcassets */,
+				652DF306232EF0380067BB01 /* Info.plist */,
+			);
+			path = "Neri WatchKit App";
+			sourceTree = "<group>";
+		};
+		652DF30F232EF0380067BB01 /* Neri WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				652DF310232EF0380067BB01 /* InterfaceController.swift */,
+				652DF312232EF0380067BB01 /* ExtensionDelegate.swift */,
+				652DF314232EF0380067BB01 /* NotificationController.swift */,
+				652DF316232EF0390067BB01 /* Assets.xcassets */,
+				652DF318232EF0390067BB01 /* Info.plist */,
+				652DF319232EF0390067BB01 /* PushNotificationPayload.apns */,
+			);
+			path = "Neri WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		652DF32D232EF2010067BB01 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				652DF2DE232EF0380067BB01 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		652DF32E232EF3370067BB01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		652DF32F232EF33E0067BB01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				652DF331232EF3690067BB01 /* GradientView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		652DF330232EF3470067BB01 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				652DF34D232EFE240067BB01 /* InitialViewController.swift */,
+				652DF34E232EFE240067BB01 /* LoadingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		652DF2D3232EF0360067BB01 /* Neri */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 652DF324232EF0390067BB01 /* Build configuration list for PBXNativeTarget "Neri" */;
+			buildPhases = (
+				652DF2D0232EF0360067BB01 /* Sources */,
+				652DF2D1232EF0360067BB01 /* Frameworks */,
+				652DF2D2232EF0360067BB01 /* Resources */,
+				652DF323232EF0390067BB01 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				652DF2FF232EF0380067BB01 /* PBXTargetDependency */,
+			);
+			name = Neri;
+			productName = Neri;
+			productReference = 652DF2D4232EF0360067BB01 /* Neri.app */;
+			productType = "com.apple.product-type.application";
+		};
+		652DF2E7232EF0380067BB01 /* NeriTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 652DF327232EF0390067BB01 /* Build configuration list for PBXNativeTarget "NeriTests" */;
+			buildPhases = (
+				652DF2E4232EF0380067BB01 /* Sources */,
+				652DF2E5232EF0380067BB01 /* Frameworks */,
+				652DF2E6232EF0380067BB01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				652DF2EA232EF0380067BB01 /* PBXTargetDependency */,
+			);
+			name = NeriTests;
+			productName = NeriTests;
+			productReference = 652DF2E8232EF0380067BB01 /* NeriTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		652DF2F2232EF0380067BB01 /* NeriUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 652DF32A232EF0390067BB01 /* Build configuration list for PBXNativeTarget "NeriUITests" */;
+			buildPhases = (
+				652DF2EF232EF0380067BB01 /* Sources */,
+				652DF2F0232EF0380067BB01 /* Frameworks */,
+				652DF2F1232EF0380067BB01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				652DF2F5232EF0380067BB01 /* PBXTargetDependency */,
+			);
+			name = NeriUITests;
+			productName = NeriUITests;
+			productReference = 652DF2F3232EF0380067BB01 /* NeriUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		652DF2FB232EF0380067BB01 /* Neri WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 652DF320232EF0390067BB01 /* Build configuration list for PBXNativeTarget "Neri WatchKit App" */;
+			buildPhases = (
+				652DF2FA232EF0380067BB01 /* Resources */,
+				652DF31F232EF0390067BB01 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				652DF30E232EF0380067BB01 /* PBXTargetDependency */,
+			);
+			name = "Neri WatchKit App";
+			productName = "Neri WatchKit App";
+			productReference = 652DF2FC232EF0380067BB01 /* Neri WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		652DF30A232EF0380067BB01 /* Neri WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 652DF31C232EF0390067BB01 /* Build configuration list for PBXNativeTarget "Neri WatchKit Extension" */;
+			buildPhases = (
+				652DF307232EF0380067BB01 /* Sources */,
+				652DF308232EF0380067BB01 /* Frameworks */,
+				652DF309232EF0380067BB01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Neri WatchKit Extension";
+			productName = "Neri WatchKit Extension";
+			productReference = 652DF30B232EF0380067BB01 /* Neri WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		652DF2CC232EF0360067BB01 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Gabriel Bendia";
+				TargetAttributes = {
+					652DF2D3232EF0360067BB01 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					652DF2E7232EF0380067BB01 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 652DF2D3232EF0360067BB01;
+					};
+					652DF2F2232EF0380067BB01 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 652DF2D3232EF0360067BB01;
+					};
+					652DF2FB232EF0380067BB01 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					652DF30A232EF0380067BB01 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = 652DF2CF232EF0360067BB01 /* Build configuration list for PBXProject "Neri" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 652DF2CB232EF0360067BB01;
+			productRefGroup = 652DF2D5232EF0360067BB01 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				652DF2D3232EF0360067BB01 /* Neri */,
+				652DF2E7232EF0380067BB01 /* NeriTests */,
+				652DF2F2232EF0380067BB01 /* NeriUITests */,
+				652DF2FB232EF0380067BB01 /* Neri WatchKit App */,
+				652DF30A232EF0380067BB01 /* Neri WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		652DF2D2232EF0360067BB01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652DF2E2232EF0380067BB01 /* LaunchScreen.storyboard in Resources */,
+				652DF2DF232EF0380067BB01 /* Assets.xcassets in Resources */,
+				652DF338232EFD6F0067BB01 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652DF2E6232EF0380067BB01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652DF2F1232EF0380067BB01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652DF2FA232EF0380067BB01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652DF305232EF0380067BB01 /* Assets.xcassets in Resources */,
+				652DF303232EF0380067BB01 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652DF309232EF0380067BB01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652DF317232EF0390067BB01 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		652DF2D0232EF0360067BB01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652DF2DA232EF0360067BB01 /* ViewController.swift in Sources */,
+				652DF2D8232EF0360067BB01 /* AppDelegate.swift in Sources */,
+				652DF350232EFE240067BB01 /* LoadingViewController.swift in Sources */,
+				652DF332232EF3690067BB01 /* GradientView.swift in Sources */,
+				652DF34F232EFE240067BB01 /* InitialViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652DF2E4232EF0380067BB01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652DF2ED232EF0380067BB01 /* NeriTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652DF2EF232EF0380067BB01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652DF2F8232EF0380067BB01 /* NeriUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652DF307232EF0380067BB01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652DF315232EF0380067BB01 /* NotificationController.swift in Sources */,
+				652DF313232EF0380067BB01 /* ExtensionDelegate.swift in Sources */,
+				652DF311232EF0380067BB01 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		652DF2EA232EF0380067BB01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 652DF2D3232EF0360067BB01 /* Neri */;
+			targetProxy = 652DF2E9232EF0380067BB01 /* PBXContainerItemProxy */;
+		};
+		652DF2F5232EF0380067BB01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 652DF2D3232EF0360067BB01 /* Neri */;
+			targetProxy = 652DF2F4232EF0380067BB01 /* PBXContainerItemProxy */;
+		};
+		652DF2FF232EF0380067BB01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 652DF2FB232EF0380067BB01 /* Neri WatchKit App */;
+			targetProxy = 652DF2FE232EF0380067BB01 /* PBXContainerItemProxy */;
+		};
+		652DF30E232EF0380067BB01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 652DF30A232EF0380067BB01 /* Neri WatchKit Extension */;
+			targetProxy = 652DF30D232EF0380067BB01 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		652DF2E0232EF0380067BB01 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				652DF2E1232EF0380067BB01 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		652DF301232EF0380067BB01 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				652DF302232EF0380067BB01 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		652DF31A232EF0390067BB01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		652DF31B232EF0390067BB01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		652DF31D232EF0390067BB01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896LGT4P2R;
+				INFOPLIST_FILE = "Neri WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gabriel.bendia.Neri.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Debug;
+		};
+		652DF31E232EF0390067BB01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896LGT4P2R;
+				INFOPLIST_FILE = "Neri WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gabriel.bendia.Neri.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Release;
+		};
+		652DF321232EF0390067BB01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896LGT4P2R;
+				IBSC_MODULE = Neri_WatchKit_Extension;
+				INFOPLIST_FILE = "Neri WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = gabriel.bendia.Neri.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Debug;
+		};
+		652DF322232EF0390067BB01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896LGT4P2R;
+				IBSC_MODULE = Neri_WatchKit_Extension;
+				INFOPLIST_FILE = "Neri WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = gabriel.bendia.Neri.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Release;
+		};
+		652DF325232EF0390067BB01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896LGT4P2R;
+				INFOPLIST_FILE = Neri/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gabriel.bendia.Neri;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		652DF326232EF0390067BB01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896LGT4P2R;
+				INFOPLIST_FILE = Neri/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gabriel.bendia.Neri;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		652DF328232EF0390067BB01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896LGT4P2R;
+				INFOPLIST_FILE = NeriTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gabriel.bendia.NeriTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neri.app/Neri";
+			};
+			name = Debug;
+		};
+		652DF329232EF0390067BB01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896LGT4P2R;
+				INFOPLIST_FILE = NeriTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gabriel.bendia.NeriTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neri.app/Neri";
+			};
+			name = Release;
+		};
+		652DF32B232EF0390067BB01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896LGT4P2R;
+				INFOPLIST_FILE = NeriUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gabriel.bendia.NeriUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Neri;
+			};
+			name = Debug;
+		};
+		652DF32C232EF0390067BB01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896LGT4P2R;
+				INFOPLIST_FILE = NeriUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gabriel.bendia.NeriUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Neri;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		652DF2CF232EF0360067BB01 /* Build configuration list for PBXProject "Neri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				652DF31A232EF0390067BB01 /* Debug */,
+				652DF31B232EF0390067BB01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		652DF31C232EF0390067BB01 /* Build configuration list for PBXNativeTarget "Neri WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				652DF31D232EF0390067BB01 /* Debug */,
+				652DF31E232EF0390067BB01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		652DF320232EF0390067BB01 /* Build configuration list for PBXNativeTarget "Neri WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				652DF321232EF0390067BB01 /* Debug */,
+				652DF322232EF0390067BB01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		652DF324232EF0390067BB01 /* Build configuration list for PBXNativeTarget "Neri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				652DF325232EF0390067BB01 /* Debug */,
+				652DF326232EF0390067BB01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		652DF327232EF0390067BB01 /* Build configuration list for PBXNativeTarget "NeriTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				652DF328232EF0390067BB01 /* Debug */,
+				652DF329232EF0390067BB01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		652DF32A232EF0390067BB01 /* Build configuration list for PBXNativeTarget "NeriUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				652DF32B232EF0390067BB01 /* Debug */,
+				652DF32C232EF0390067BB01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 652DF2CC232EF0360067BB01 /* Project object */;
+}
