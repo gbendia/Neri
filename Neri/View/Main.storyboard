@@ -647,9 +647,6 @@
                                         <rect key="frame" x="16" y="135" width="343" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="one-time-code"/>
-                                        <connections>
-                                            <action selector="codeWillChange:" destination="gIG-yJ-ze6" eventType="editingChanged" id="qyi-rH-AXK"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
