@@ -1,0 +1,6 @@
+framework module Pods_Neri_WatchKit_App {
+  umbrella header "Pods-Neri WatchKit App-umbrella.h"
+
+  export *
+  module * { export * }
+}
