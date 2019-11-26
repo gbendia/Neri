@@ -403,10 +403,10 @@
             </objects>
             <point key="canvasLocation" x="-381.60000000000002" y="491.60419790104953"/>
         </scene>
-        <!--Elders View Controller-->
+        <!--Elders List View Controller-->
         <scene sceneID="GgV-mI-cJM">
             <objects>
-                <viewController id="Wa5-LR-ftC" customClass="EldersViewController" customModule="Neri" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Wa5-LR-ftC" customClass="EldersListViewController" customModule="Neri" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wcr-Nt-Zen"/>
                         <viewControllerLayoutGuide type="bottom" id="v9o-8y-zIN"/>
@@ -632,7 +632,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="continue2Main:" destination="gIG-yJ-ze6" eventType="touchUpInside" id="Sd0-0E-rNi"/>
                                             <action selector="continueButtonClicked:" destination="gIG-yJ-ze6" eventType="touchUpInside" id="OHk-wd-LIl"/>
                                         </connections>
                                     </button>
@@ -880,7 +879,7 @@ All you need to do is send them the code below.</string>
                     </view>
                     <connections>
                         <outlet property="shareButton" destination="6M1-cS-QUJ" id="BPS-Ou-Kn9"/>
-                        <segue destination="lfJ-h6-DjB" kind="presentation" identifier="go2MainElder" id="MNf-5z-bC0"/>
+                        <segue destination="lfJ-h6-DjB" kind="presentation" identifier="goToMainElder" id="MNf-5z-bC0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8HW-bl-USU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1864,9 +1863,9 @@ All you need to do is send them the code below.</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3El-Mi-09a"/>
-        <segue reference="KcL-gv-czi"/>
+        <segue reference="MNf-5z-bC0"/>
         <segue reference="4Mt-Tv-gv3"/>
-        <segue reference="hU6-VN-XNY"/>
+        <segue reference="MG8-kf-Bif"/>
         <segue reference="5ht-I4-03D"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,7 +7,7 @@ class BasicFormViewController: UIViewController {
     }
     
     func showEmptyFieldAlert() {
-        showCustomAlertWithOKOption("Empty field", "Please fill every fields with valid values.")
+        showCustomAlertWithOKOption("Empty field", "Please fill every fields with valid values")
     }
     
     func showInvalidFieldAlert(for fields: Array<String>) {
@@ -16,7 +16,7 @@ class BasicFormViewController: UIViewController {
         }
         
         if (fields.count == 1) {
-            showCustomAlertWithOKOption("Invalid field", "The field \(fields[0]) was not filled with a valid value.")
+            showCustomAlertWithOKOption("Invalid field", "The field \(fields[0]) was not filled with a valid value")
         } else {
             var auxFields = fields
             var message = "The fields \(auxFields[0])"
@@ -28,7 +28,7 @@ class BasicFormViewController: UIViewController {
                     message.append(", \(field)")
                 }
             }
-            message.append(" were not filled with valid values.")
+            message.append(" were not filled with valid values")
             showCustomAlertWithOKOption("Invalid fields", message)
         }
     }

@@ -37,14 +37,15 @@ class PairingViewController: BasicFormViewController {
         }
         
         var invalidFields = [String]()
-        if (!hasValidPairingCode()) {
-            invalidFields.append("\"Pairing Code\"")
-        }
         if (!hasValidPhoneNumber()) {
-            invalidFields.append("\"Phone Number\"")
+            invalidFields.append("\"Phone number\"")
+        }
+        if (!hasValidPairingCode()) {
+            invalidFields.append("\"Pairing code\"")
         }
         if (!invalidFields.isEmpty) {
             showInvalidFieldAlert(for: invalidFields)
+            return
         }
         
         // Salvar dados no banco
