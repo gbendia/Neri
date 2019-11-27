@@ -30,6 +30,10 @@ class PairingViewController: BasicFormViewController {
         return PhoneValidator.isValid(phoneNumberTextField.text!)
     }
     
+    @IBAction func backButtonClicked(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     @IBAction func continueButtonClicked(_ sender: Any) {
         if (hasEmptyFields()) {
             showEmptyFieldAlert()

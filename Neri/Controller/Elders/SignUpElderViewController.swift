@@ -67,6 +67,10 @@ class ElderSignUpViewController: BasicFormViewController {
         
     }
     
+    @IBAction func backButtonClicked(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     @IBAction func continueClicked(_ sender: Any) {
         if (hasEmptyFields()) {
             showEmptyFieldAlert()

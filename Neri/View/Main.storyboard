@@ -43,8 +43,8 @@
                     </view>
                     <connections>
                         <segue destination="lfJ-h6-DjB" kind="presentation" identifier="showElder" id="KcL-gv-czi"/>
-                        <segue destination="P9o-eb-crH" kind="show" identifier="showInitial" id="C5g-cG-RTk"/>
-                        <segue destination="Wa5-LR-ftC" kind="show" id="TJj-KL-ViZ"/>
+                        <segue destination="P9o-eb-crH" kind="presentation" identifier="showInitial" id="C5g-cG-RTk"/>
+                        <segue destination="Wa5-LR-ftC" kind="presentation" id="TJj-KL-ViZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ykJ-D6-wUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -110,7 +110,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9dE-tZ-KhG" kind="show" id="hU6-VN-XNY"/>
+                                    <segue destination="9dE-tZ-KhG" kind="presentation" id="hU6-VN-XNY"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow right" translatesAutoresizingMaskIntoConstraints="NO" id="XZl-x8-WMY">
@@ -223,7 +223,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="P9o-eb-crH" kind="show" id="RA7-BV-GLJ"/>
+                                                            <action selector="backButtonClicked:" destination="9dE-tZ-KhG" eventType="touchUpInside" id="30W-R9-2fT"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3t-uO-Nxm">
@@ -673,7 +673,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="P9o-eb-crH" kind="show" id="5ht-I4-03D"/>
+                                    <action selector="backButtonClicked:" destination="gIG-yJ-ze6" eventType="touchUpInside" id="BCg-WF-zQL"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow left" translatesAutoresizingMaskIntoConstraints="NO" id="GQm-LF-nFm">
@@ -720,10 +720,10 @@
             </objects>
             <point key="canvasLocation" x="-382" y="-364"/>
         </scene>
-        <!--Share View Controller-->
+        <!--Pairing Code View Controller-->
         <scene sceneID="Df0-xa-hfb">
             <objects>
-                <viewController id="FnW-Su-1c9" customClass="ShareViewController" customModule="Neri" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FnW-Su-1c9" customClass="PairingCodeViewController" customModule="Neri" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SPo-Gq-Hl4"/>
                         <viewControllerLayoutGuide type="bottom" id="EL4-qA-qUF"/>
@@ -778,7 +778,7 @@ All you need to do is send them the code below.</string>
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="9dE-tZ-KhG" kind="show" id="MG8-kf-Bif"/>
+                                                    <action selector="backButtonClicked:" destination="FnW-Su-1c9" eventType="touchUpInside" id="3XE-5B-Fue"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow right" translatesAutoresizingMaskIntoConstraints="NO" id="EK4-iT-fHv">
@@ -806,7 +806,7 @@ All you need to do is send them the code below.</string>
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="share:" destination="FnW-Su-1c9" eventType="touchUpInside" id="jTK-au-QuL"/>
+                                                    <segue destination="lfJ-h6-DjB" kind="presentation" id="uNt-vX-bDR"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -874,8 +874,7 @@ All you need to do is send them the code below.</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="shareButton" destination="6M1-cS-QUJ" id="BPS-Ou-Kn9"/>
-                        <segue destination="lfJ-h6-DjB" kind="presentation" identifier="goToMainElder" id="MNf-5z-bC0"/>
+                        <outlet property="pairingCodeLabel" destination="3vn-hL-tmK" id="tmv-pH-aIG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8HW-bl-USU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1260,9 +1259,6 @@ All you need to do is send them the code below.</string>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="24" maxY="18"/>
                                         <state key="normal" image="arrow left"/>
-                                        <connections>
-                                            <segue destination="lfJ-h6-DjB" kind="show" id="63e-NF-2az"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubw-IF-soG">
                                         <rect key="frame" x="109" y="136" width="140" height="22"/>
@@ -1450,9 +1446,6 @@ All you need to do is send them the code below.</string>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="24" maxY="18"/>
                                                 <state key="normal" image="arrow left"/>
-                                                <connections>
-                                                    <segue destination="Wa5-LR-ftC" kind="show" id="fNo-eg-NWr"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYq-hg-bon">
                                                 <rect key="frame" x="319" y="8" width="40" height="40"/>
@@ -1463,7 +1456,7 @@ All you need to do is send them the code below.</string>
                                                 <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="18"/>
                                                 <state key="normal" image="info"/>
                                                 <connections>
-                                                    <segue destination="dXo-uH-lm5" kind="show" id="6ft-lP-sVr"/>
+                                                    <segue destination="dXo-uH-lm5" kind="presentation" id="6ft-lP-sVr"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1747,9 +1740,6 @@ All you need to do is send them the code below.</string>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="24" maxY="18"/>
                                         <state key="normal" image="arrow left"/>
-                                        <connections>
-                                            <segue destination="S0I-Hz-CFn" kind="show" id="Ar1-Qi-pRD"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIr-js-HJw">
                                         <rect key="frame" x="109" y="136" width="140" height="22"/>
@@ -1858,11 +1848,7 @@ All you need to do is send them the code below.</string>
         <image name="walking" width="57" height="94"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JZn-QG-jbN"/>
-        <segue reference="3El-Mi-09a"/>
-        <segue reference="MNf-5z-bC0"/>
+        <segue reference="KcL-gv-czi"/>
         <segue reference="4Mt-Tv-gv3"/>
-        <segue reference="MG8-kf-Bif"/>
-        <segue reference="RA7-BV-GLJ"/>
     </inferredMetricsTieBreakers>
 </document>

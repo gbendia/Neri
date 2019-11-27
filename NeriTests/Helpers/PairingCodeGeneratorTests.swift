@@ -11,9 +11,10 @@ class PairingCodeGeneratorTests: XCTestCase {
      * when generating a pairing code with default size,
      * then the code returned should have only zeros.
      */
-    func pairingCodeWithDefaultSizeShouldBeAbleToStartWithZero() {
+    func testPairingCodeWithDefaultSizeShouldBeAbleToStartWithZeroTest() {
         let expectedCode = "000000"
-        let generatedCode = PairingCodeGenerator.generateCode(generator: zeroIntGenerator)
+        let generatedCode = PairingCodeGenerator.generate(generator: zeroIntGenerator)
+        
         XCTAssertEqual(generatedCode, expectedCode)
     }
 
@@ -22,9 +23,10 @@ class PairingCodeGeneratorTests: XCTestCase {
      * when generating a pairing code with 10 digits,
      * then the code returned should have size equals to 10.
      */
-    func generateCodeWithTwoDigitsNumberGenerator() {
+    func testGenerateCodeWithTwoDigitsNumberGenerator() {
         let expectedCodeSize = 10
-        let generatedCode = PairingCodeGenerator.generateCode(with: 10)
+        let generatedCode = PairingCodeGenerator.generate(with: 10)
+        
         XCTAssertEqual(generatedCode.count, expectedCodeSize)
     }
 

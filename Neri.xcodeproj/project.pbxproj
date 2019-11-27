@@ -31,6 +31,7 @@
 		652FEE43238E15620093C718 /* PairingCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE42238E15620093C718 /* PairingCodeGenerator.swift */; };
 		652FEE49238E29980093C718 /* RandomNumberGeneratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE48238E29980093C718 /* RandomNumberGeneratorMock.swift */; };
 		652FEE4B238E308C0093C718 /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE4A238E308C0093C718 /* RandomNumberGenerator.swift */; };
+		652FEE4F238E363C0093C718 /* PairingCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE4E238E363C0093C718 /* PairingCodeViewController.swift */; };
 		65F358292388E1CB003A09B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65F358282388E1CB003A09B6 /* GoogleService-Info.plist */; };
 		65F3582B238CC8FD003A09B6 /* PairingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3582A238CC8FD003A09B6 /* PairingViewController.swift */; };
 		65F3582F238CC9C8003A09B6 /* EldersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3582E238CC9C8003A09B6 /* EldersListViewController.swift */; };
@@ -138,6 +139,7 @@
 		652FEE42238E15620093C718 /* PairingCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingCodeGenerator.swift; sourceTree = "<group>"; };
 		652FEE48238E29980093C718 /* RandomNumberGeneratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberGeneratorMock.swift; sourceTree = "<group>"; };
 		652FEE4A238E308C0093C718 /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
+		652FEE4E238E363C0093C718 /* PairingCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingCodeViewController.swift; sourceTree = "<group>"; };
 		65F358282388E1CB003A09B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65F3582A238CC8FD003A09B6 /* PairingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingViewController.swift; sourceTree = "<group>"; };
 		65F3582E238CC9C8003A09B6 /* EldersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldersListViewController.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				652FEE3D238E09960093C718 /* SignUpElderViewController.swift */,
+				652FEE4E238E363C0093C718 /* PairingCodeViewController.swift */,
 			);
 			path = Elders;
 			sourceTree = "<group>";
@@ -711,6 +714,7 @@
 			files = (
 				652DF2DA232EF0360067BB01 /* ViewController.swift in Sources */,
 				652FEE3E238E09960093C718 /* SignUpElderViewController.swift in Sources */,
+				652FEE4F238E363C0093C718 /* PairingCodeViewController.swift in Sources */,
 				65F3582B238CC8FD003A09B6 /* PairingViewController.swift in Sources */,
 				652DF2D8232EF0360067BB01 /* AppDelegate.swift in Sources */,
 				65F3582F238CC9C8003A09B6 /* EldersListViewController.swift in Sources */,
