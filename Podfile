@@ -8,6 +8,10 @@ target 'Neri' do
   # Pods for Neri
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Performance'
+  pod 'Firebase/Analytics'
+  pod 'Fabric', '~> 1.10.2'
+  pod 'Crashlytics', '~> 3.14.0'
 
   target 'NeriTests' do
     inherit! :search_paths

@@ -7,17 +7,17 @@
 		<key>Neri WatchKit App (Notification).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>25</integer>
+			<integer>34</integer>
 		</dict>
 		<key>Neri WatchKit App.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>24</integer>
+			<integer>33</integer>
 		</dict>
 		<key>Neri.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>23</integer>
+			<integer>32</integer>
 		</dict>
 	</dict>
 </dict>

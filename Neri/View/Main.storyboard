@@ -149,9 +149,6 @@
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <connections>
-                        <outlet property="gradientView" destination="LPP-U8-2U7" id="oX8-M6-Uhb"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4xU-AX-pm0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1862,10 +1859,11 @@ All you need to do is send them the code below.</string>
         <image name="walking" width="57" height="94"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="8hi-CW-Dw1"/>
         <segue reference="3El-Mi-09a"/>
         <segue reference="MNf-5z-bC0"/>
         <segue reference="4Mt-Tv-gv3"/>
-        <segue reference="MG8-kf-Bif"/>
+        <segue reference="hU6-VN-XNY"/>
         <segue reference="5ht-I4-03D"/>
     </inferredMetricsTieBreakers>
 </document>
