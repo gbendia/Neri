@@ -12,7 +12,7 @@
 		652DF2DA232EF0360067BB01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF2D9232EF0360067BB01 /* ViewController.swift */; };
 		652DF2DF232EF0380067BB01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652DF2DE232EF0380067BB01 /* Assets.xcassets */; };
 		652DF2E2232EF0380067BB01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652DF2E0232EF0380067BB01 /* LaunchScreen.storyboard */; };
-		652DF2ED232EF0380067BB01 /* NeriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF2EC232EF0380067BB01 /* NeriTests.swift */; };
+		652DF2ED232EF0380067BB01 /* PairingCodeGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF2EC232EF0380067BB01 /* PairingCodeGeneratorTests.swift */; };
 		652DF2F8232EF0380067BB01 /* NeriUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF2F7232EF0380067BB01 /* NeriUITests.swift */; };
 		652DF2FD232EF0380067BB01 /* Neri WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 652DF2FC232EF0380067BB01 /* Neri WatchKit App.app */; };
 		652DF303232EF0380067BB01 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652DF301232EF0380067BB01 /* Interface.storyboard */; };
@@ -28,6 +28,9 @@
 		652DF350232EFE240067BB01 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF34E232EFE240067BB01 /* LoadingViewController.swift */; };
 		652FEE3E238E09960093C718 /* SignUpElderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE3D238E09960093C718 /* SignUpElderViewController.swift */; };
 		652FEE41238E12410093C718 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE40238E12410093C718 /* Extensions.swift */; };
+		652FEE43238E15620093C718 /* PairingCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE42238E15620093C718 /* PairingCodeGenerator.swift */; };
+		652FEE49238E29980093C718 /* RandomNumberGeneratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE48238E29980093C718 /* RandomNumberGeneratorMock.swift */; };
+		652FEE4B238E308C0093C718 /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE4A238E308C0093C718 /* RandomNumberGenerator.swift */; };
 		65F358292388E1CB003A09B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65F358282388E1CB003A09B6 /* GoogleService-Info.plist */; };
 		65F3582B238CC8FD003A09B6 /* PairingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3582A238CC8FD003A09B6 /* PairingViewController.swift */; };
 		65F3582F238CC9C8003A09B6 /* EldersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3582E238CC9C8003A09B6 /* EldersListViewController.swift */; };
@@ -110,7 +113,7 @@
 		652DF2E1232EF0380067BB01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		652DF2E3232EF0380067BB01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652DF2E8232EF0380067BB01 /* NeriTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeriTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		652DF2EC232EF0380067BB01 /* NeriTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeriTests.swift; sourceTree = "<group>"; };
+		652DF2EC232EF0380067BB01 /* PairingCodeGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingCodeGeneratorTests.swift; sourceTree = "<group>"; };
 		652DF2EE232EF0380067BB01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652DF2F3232EF0380067BB01 /* NeriUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeriUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		652DF2F7232EF0380067BB01 /* NeriUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeriUITests.swift; sourceTree = "<group>"; };
@@ -132,6 +135,9 @@
 		652DF34E232EFE240067BB01 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		652FEE3D238E09960093C718 /* SignUpElderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpElderViewController.swift; sourceTree = "<group>"; };
 		652FEE40238E12410093C718 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		652FEE42238E15620093C718 /* PairingCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingCodeGenerator.swift; sourceTree = "<group>"; };
+		652FEE48238E29980093C718 /* RandomNumberGeneratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberGeneratorMock.swift; sourceTree = "<group>"; };
+		652FEE4A238E308C0093C718 /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
 		65F358282388E1CB003A09B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65F3582A238CC8FD003A09B6 /* PairingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingViewController.swift; sourceTree = "<group>"; };
 		65F3582E238CC9C8003A09B6 /* EldersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldersListViewController.swift; sourceTree = "<group>"; };
@@ -232,7 +238,8 @@
 		652DF2EB232EF0380067BB01 /* NeriTests */ = {
 			isa = PBXGroup;
 			children = (
-				652DF2EC232EF0380067BB01 /* NeriTests.swift */,
+				652FEE46238E296B0093C718 /* Mocks */,
+				652FEE47238E29770093C718 /* Helpers */,
 				652DF2EE232EF0380067BB01 /* Info.plist */,
 			);
 			path = NeriTests;
@@ -311,6 +318,24 @@
 			children = (
 				65F35832238CD62A003A09B6 /* Validators.swift */,
 				652FEE40238E12410093C718 /* Extensions.swift */,
+				652FEE4A238E308C0093C718 /* RandomNumberGenerator.swift */,
+				652FEE42238E15620093C718 /* PairingCodeGenerator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		652FEE46238E296B0093C718 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				652FEE48238E29980093C718 /* RandomNumberGeneratorMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		652FEE47238E29770093C718 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				652DF2EC232EF0380067BB01 /* PairingCodeGeneratorTests.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -689,9 +714,11 @@
 				65F3582B238CC8FD003A09B6 /* PairingViewController.swift in Sources */,
 				652DF2D8232EF0360067BB01 /* AppDelegate.swift in Sources */,
 				65F3582F238CC9C8003A09B6 /* EldersListViewController.swift in Sources */,
+				652FEE43238E15620093C718 /* PairingCodeGenerator.swift in Sources */,
 				652DF350232EFE240067BB01 /* LoadingViewController.swift in Sources */,
 				65F35831238CCB60003A09B6 /* BasicFormViewController.swift in Sources */,
 				652DF332232EF3690067BB01 /* GradientView.swift in Sources */,
+				652FEE4B238E308C0093C718 /* RandomNumberGenerator.swift in Sources */,
 				652DF34F232EFE240067BB01 /* InitialViewController.swift in Sources */,
 				652FEE41238E12410093C718 /* Extensions.swift in Sources */,
 				65F35833238CD62A003A09B6 /* Validators.swift in Sources */,
@@ -702,7 +729,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				652DF2ED232EF0380067BB01 /* NeriTests.swift in Sources */,
+				652DF2ED232EF0380067BB01 /* PairingCodeGeneratorTests.swift in Sources */,
+				652FEE49238E29980093C718 /* RandomNumberGeneratorMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
