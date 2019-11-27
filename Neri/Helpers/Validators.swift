@@ -11,3 +11,9 @@ class PhoneValidator: Validator {
         return true
     }
 }
+
+class DateValidator: Validator {
+    static func isValid(_ string: String) -> Bool {
+        return true
+    }
+}

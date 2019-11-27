@@ -26,6 +26,8 @@
 		652DF338232EFD6F0067BB01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652DF337232EFD6E0067BB01 /* Main.storyboard */; };
 		652DF34F232EFE240067BB01 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF34D232EFE240067BB01 /* InitialViewController.swift */; };
 		652DF350232EFE240067BB01 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF34E232EFE240067BB01 /* LoadingViewController.swift */; };
+		652FEE3E238E09960093C718 /* SignUpElderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE3D238E09960093C718 /* SignUpElderViewController.swift */; };
+		652FEE41238E12410093C718 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE40238E12410093C718 /* Extensions.swift */; };
 		65F358292388E1CB003A09B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65F358282388E1CB003A09B6 /* GoogleService-Info.plist */; };
 		65F3582B238CC8FD003A09B6 /* PairingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3582A238CC8FD003A09B6 /* PairingViewController.swift */; };
 		65F3582F238CC9C8003A09B6 /* EldersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3582E238CC9C8003A09B6 /* EldersListViewController.swift */; };
@@ -128,11 +130,13 @@
 		652DF337232EFD6E0067BB01 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = /Users/gabrielbendia/Documents/Projeto_Final/Neri/Neri/View/Main.storyboard; sourceTree = "<absolute>"; };
 		652DF34D232EFE240067BB01 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		652DF34E232EFE240067BB01 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		652FEE3D238E09960093C718 /* SignUpElderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpElderViewController.swift; sourceTree = "<group>"; };
+		652FEE40238E12410093C718 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		65F358282388E1CB003A09B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65F3582A238CC8FD003A09B6 /* PairingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingViewController.swift; sourceTree = "<group>"; };
 		65F3582E238CC9C8003A09B6 /* EldersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldersListViewController.swift; sourceTree = "<group>"; };
 		65F35830238CCB60003A09B6 /* BasicFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFormViewController.swift; sourceTree = "<group>"; };
-		65F35832238CD62A003A09B6 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = SOURCE_ROOT; };
+		65F35832238CD62A003A09B6 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Validators.swift; path = Neri/Helpers/Validators.swift; sourceTree = SOURCE_ROOT; };
 		A44EF1C5FBC74B5643024214 /* Pods-NeriUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeriUITests.debug.xcconfig"; path = "Target Support Files/Pods-NeriUITests/Pods-NeriUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AAA0EFF7AD2C38CD25D4EA58 /* Pods_Neri_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neri_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB571B8FCE24B4F9913F4F9 /* Pods-Neri.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neri.release.xcconfig"; path = "Target Support Files/Pods-Neri/Pods-Neri.release.xcconfig"; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 		652DF2D6232EF0360067BB01 /* Neri */ = {
 			isa = PBXGroup;
 			children = (
+				652FEE3F238E122D0093C718 /* Helpers */,
 				652DF32E232EF3370067BB01 /* Model */,
 				652DF32F232EF33E0067BB01 /* View */,
 				652DF330232EF3470067BB01 /* Controller */,
@@ -276,7 +281,6 @@
 		652DF32E232EF3370067BB01 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				65F35832238CD62A003A09B6 /* Validators.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,9 +306,19 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		652FEE3F238E122D0093C718 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				65F35832238CD62A003A09B6 /* Validators.swift */,
+				652FEE40238E12410093C718 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		65F3582C238CC9A5003A09B6 /* Elders */ = {
 			isa = PBXGroup;
 			children = (
+				652FEE3D238E09960093C718 /* SignUpElderViewController.swift */,
 			);
 			path = Elders;
 			sourceTree = "<group>";
@@ -671,6 +685,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				652DF2DA232EF0360067BB01 /* ViewController.swift in Sources */,
+				652FEE3E238E09960093C718 /* SignUpElderViewController.swift in Sources */,
 				65F3582B238CC8FD003A09B6 /* PairingViewController.swift in Sources */,
 				652DF2D8232EF0360067BB01 /* AppDelegate.swift in Sources */,
 				65F3582F238CC9C8003A09B6 /* EldersListViewController.swift in Sources */,
@@ -678,6 +693,7 @@
 				65F35831238CCB60003A09B6 /* BasicFormViewController.swift in Sources */,
 				652DF332232EF3690067BB01 /* GradientView.swift in Sources */,
 				652DF34F232EFE240067BB01 /* InitialViewController.swift in Sources */,
+				652FEE41238E12410093C718 /* Extensions.swift in Sources */,
 				65F35833238CD62A003A09B6 /* Validators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

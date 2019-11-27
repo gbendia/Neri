@@ -7,7 +7,7 @@ class PairingViewController: BasicFormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        hideKeyboardWhenTappingOutsideTextField()
     }
     
     private func hasEmptyFields() -> Bool {

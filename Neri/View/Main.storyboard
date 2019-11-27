@@ -154,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="-1231.8840579710145" y="139.28571428571428"/>
         </scene>
-        <!--Elder Info View Controller-->
+        <!--Elder Sign Up View Controller-->
         <scene sceneID="12h-QX-BVF">
             <objects>
-                <viewController id="9dE-tZ-KhG" customClass="ElderInfoViewController" customModule="Neri" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9dE-tZ-KhG" customClass="ElderSignUpViewController" customModule="Neri" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ewy-SC-i5a"/>
                         <viewControllerLayoutGuide type="bottom" id="3lg-8d-qRN"/>
@@ -182,35 +182,35 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4z-va-hnB" userLabel="2">
                                                 <rect key="frame" x="0.0" y="216" width="375" height="485"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FnP-5A-2Tq">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FnP-5A-2Tq">
                                                         <rect key="frame" x="16" y="25" width="343" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t7n-3q-ke4">
                                                         <rect key="frame" x="16" y="71" width="343" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="44Q-Ez-M41">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adress" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="44Q-Ez-M41">
                                                         <rect key="frame" x="16" y="163" width="343" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="street-address"/>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5p-e5-Gz9">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="C5p-e5-Gz9">
                                                         <rect key="frame" x="16" y="209" width="289" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="address-level2"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UF" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MHN-Xh-o95">
                                                         <rect key="frame" x="319" y="209" width="40" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="address-level1"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sdO-JX-jMR">
                                                         <rect key="frame" x="16" y="255" width="343" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dp-IV-4oI">
                                                         <rect key="frame" x="16" y="339" width="108" height="46"/>
@@ -237,7 +237,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="continue:" destination="9dE-tZ-KhG" eventType="touchUpInside" id="eVo-UH-9ee"/>
+                                                            <action selector="continueClicked:" destination="9dE-tZ-KhG" eventType="touchUpInside" id="zTw-Dg-W9B"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIz-pG-xDI">
@@ -251,18 +251,18 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="openCameraButton:" destination="9dE-tZ-KhG" eventType="touchUpInside" id="pCw-vp-wjN"/>
+                                                            <action selector="addPhotoClicked:" destination="9dE-tZ-KhG" eventType="touchUpInside" id="Caj-zR-iaq"/>
                                                         </connections>
                                                     </button>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odL-Hx-50F">
                                                         <rect key="frame" x="16" y="117" width="164.5" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5iW-ma-h82">
                                                         <rect key="frame" x="194.5" y="117" width="164.5" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                     </textField>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow right" translatesAutoresizingMaskIntoConstraints="NO" id="y0y-aL-Bue">
                                                         <rect key="frame" x="349" y="354" width="10" height="16"/>
@@ -385,15 +385,15 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="adress" destination="44Q-Ez-M41" id="RBs-w1-mV3"/>
-                        <outlet property="age" destination="t7n-3q-ke4" id="ulr-m4-oPe"/>
-                        <outlet property="bottomConstraint" destination="ZHe-k2-Mjh" id="XKg-Za-EgE"/>
-                        <outlet property="city" destination="C5p-e5-Gz9" id="gft-1O-hVi"/>
-                        <outlet property="name" destination="FnP-5A-2Tq" id="dKT-q2-rPg"/>
-                        <outlet property="state" destination="MHN-Xh-o95" id="SSi-JY-Aww"/>
-                        <outlet property="telephone" destination="sdO-JX-jMR" id="NUp-X9-Jz0"/>
-                        <outlet property="view2" destination="V4z-va-hnB" id="SWZ-Aa-rul"/>
-                        <segue destination="FnW-Su-1c9" kind="presentation" identifier="go2Share" id="JZn-QG-jbN"/>
+                        <outlet property="adressTextField" destination="44Q-Ez-M41" id="qcC-15-LXK"/>
+                        <outlet property="birthdayTextField" destination="t7n-3q-ke4" id="Ejf-8i-3LM"/>
+                        <outlet property="heightTextField" destination="5iW-ma-h82" id="oGL-lQ-vt7"/>
+                        <outlet property="nameTextField" destination="FnP-5A-2Tq" id="t6A-Ud-mB6"/>
+                        <outlet property="phoneNumberTextField" destination="sdO-JX-jMR" id="3V5-JG-UVa"/>
+                        <outlet property="stateTextField" destination="MHN-Xh-o95" id="oQc-rl-hWF"/>
+                        <outlet property="streetTextField" destination="C5p-e5-Gz9" id="Qbr-4s-BaB"/>
+                        <outlet property="weightTextField" destination="odL-Hx-50F" id="l6u-Sj-gLN"/>
+                        <segue destination="FnW-Su-1c9" kind="presentation" identifier="goToPairingCode" id="JZn-QG-jbN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jnh-HP-zNR" sceneMemberID="firstResponder"/>
@@ -806,7 +806,6 @@ All you need to do is send them the code below.</string>
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="continue:" destination="9dE-tZ-KhG" eventType="touchUpInside" id="UMN-ER-sFh"/>
                                                     <action selector="share:" destination="FnW-Su-1c9" eventType="touchUpInside" id="jTK-au-QuL"/>
                                                 </connections>
                                             </button>
@@ -1859,11 +1858,11 @@ All you need to do is send them the code below.</string>
         <image name="walking" width="57" height="94"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8hi-CW-Dw1"/>
+        <segue reference="JZn-QG-jbN"/>
         <segue reference="3El-Mi-09a"/>
         <segue reference="MNf-5z-bC0"/>
         <segue reference="4Mt-Tv-gv3"/>
-        <segue reference="hU6-VN-XNY"/>
-        <segue reference="5ht-I4-03D"/>
+        <segue reference="MG8-kf-Bif"/>
+        <segue reference="RA7-BV-GLJ"/>
     </inferredMetricsTieBreakers>
 </document>
