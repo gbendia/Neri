@@ -387,11 +387,11 @@
                     <connections>
                         <outlet property="adressTextField" destination="44Q-Ez-M41" id="qcC-15-LXK"/>
                         <outlet property="birthdayTextField" destination="t7n-3q-ke4" id="Ejf-8i-3LM"/>
+                        <outlet property="cityTextField" destination="C5p-e5-Gz9" id="4Xj-e9-Qei"/>
                         <outlet property="heightTextField" destination="5iW-ma-h82" id="oGL-lQ-vt7"/>
                         <outlet property="nameTextField" destination="FnP-5A-2Tq" id="t6A-Ud-mB6"/>
                         <outlet property="phoneNumberTextField" destination="sdO-JX-jMR" id="3V5-JG-UVa"/>
                         <outlet property="stateTextField" destination="MHN-Xh-o95" id="oQc-rl-hWF"/>
-                        <outlet property="streetTextField" destination="C5p-e5-Gz9" id="Qbr-4s-BaB"/>
                         <outlet property="weightTextField" destination="odL-Hx-50F" id="l6u-Sj-gLN"/>
                         <segue destination="FnW-Su-1c9" kind="presentation" identifier="goToPairingCode" id="JZn-QG-jbN"/>
                     </connections>

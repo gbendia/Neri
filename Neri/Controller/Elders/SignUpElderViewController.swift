@@ -6,8 +6,8 @@ class ElderSignUpViewController: BasicFormViewController {
     @IBOutlet weak var birthdayTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var heightTextField: UITextField!
-    @IBOutlet weak var adressTextField: UITextField!
-    @IBOutlet weak var streetTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
@@ -18,8 +18,8 @@ class ElderSignUpViewController: BasicFormViewController {
         textFields = [nameTextField,
                       birthdayTextField,
                       weightTextField,
-                      adressTextField,
-                      streetTextField,
+                      addressTextField,
+                      cityTextField,
                       stateTextField,
                       phoneNumberTextField]
         
@@ -84,6 +84,14 @@ class ElderSignUpViewController: BasicFormViewController {
         }
         
         // Fill and save elder
+        Elder.singleton.name = nameTextField.text!
+        Elder.singleton.birthday = DateHelper.dateFrom(string: birthdayTextField.text!, format: DateHelper.DATE_ONLY_FORMAT)
+        Elder.singleton.weight = (weightTextField.text! as NSString).floatValue
+        Elder.singleton.height = (heightTextField.text! as NSString).floatValue
+        Elder.singleton.address = addressTextField.text!
+        Elder.singleton.city = cityTextField.text!
+        Elder.singleton.state = stateTextField.text!
+        Elder.singleton.phoneNumber = phoneNumberTextField.text!
         
         performSegue(withIdentifier: "goToPairingCode", sender: self)
     }

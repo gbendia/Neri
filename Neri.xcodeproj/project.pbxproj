@@ -243,7 +243,6 @@
 				652DF330232EF3470067BB01 /* Controller */,
 				652DF2D7232EF0360067BB01 /* AppDelegate.swift */,
 				652DF2D9232EF0360067BB01 /* ViewController.swift */,
-				652DF2E0232EF0380067BB01 /* LaunchScreen.storyboard */,
 				652DF32D232EF2010067BB01 /* Resources */,
 				652DF2E3232EF0380067BB01 /* Info.plist */,
 				65F358282388E1CB003A09B6 /* GoogleService-Info.plist */,
@@ -314,6 +313,7 @@
 		652DF32F232EF33E0067BB01 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				652DF2E0232EF0380067BB01 /* LaunchScreen.storyboard */,
 				652DF337232EFD6E0067BB01 /* Main.storyboard */,
 				652DF331232EF3690067BB01 /* GradientView.swift */,
 			);
