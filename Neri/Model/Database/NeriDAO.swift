@@ -5,7 +5,7 @@ class NeriDAO {
     
     private let db = Firestore.firestore()
     
-    func save(collection: String, data: [String: Any], completionHandler: @escaping () -> Void) -> DocumentReference? {
+    func save(collection: String, data: [String: Any], completionHandler: @escaping () -> Void) -> String? {
         var ref: DocumentReference? = nil
         ref = db.collection(collection).addDocument(data: data) { err in
             if let err = err {
@@ -17,7 +17,7 @@ class NeriDAO {
             }
         }
         
-        return ref
+        return ref?.documentID
     }
     
     func getDocumentByID(collection: String, id: String, completionHandler: @escaping ([String: Any]) -> Void) {
@@ -40,6 +40,8 @@ class NeriDAO {
             } else {
                 var documents = [[String: Any]]()
                 for document in querySnapshot!.documents {
+                    var documentData = document.data()
+                    documentData["documentID"] = document.documentID
                     documents.append(document.data())
                 }
                 completionHandler(documents)
