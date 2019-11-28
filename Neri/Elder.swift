@@ -15,6 +15,11 @@ class Elder {
     var phoneNumber: String = ""
     var emergencyPhone: String = ""
     
+    // MARK: - Tracking Information
+    var heartRate: Int = -1
+//    var location:
+    var fallDetected: Bool = false
+    
     // MARK: - Pairing Code
     var pairingCode: String = ""
     var codeCreatedAt: Date = Date()

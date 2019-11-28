@@ -37,6 +37,8 @@
 		652FEE56238F5F520093C718 /* ElderDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE55238F5F520093C718 /* ElderDAO.swift */; };
 		652FEE58238F60140093C718 /* NeriDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE57238F60140093C718 /* NeriDAO.swift */; };
 		652FEE5A238F720B0093C718 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE59238F720B0093C718 /* GlobalConstants.swift */; };
+		652FEE5C238F84D30093C718 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE5B238F84D30093C718 /* DateHelper.swift */; };
+		652FEE5E238F86C40093C718 /* DateHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE5D238F86C40093C718 /* DateHelperTests.swift */; };
 		65F358292388E1CB003A09B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65F358282388E1CB003A09B6 /* GoogleService-Info.plist */; };
 		65F3582B238CC8FD003A09B6 /* PairingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3582A238CC8FD003A09B6 /* PairingViewController.swift */; };
 		65F3582F238CC9C8003A09B6 /* EldersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3582E238CC9C8003A09B6 /* EldersListViewController.swift */; };
@@ -150,6 +152,8 @@
 		652FEE55238F5F520093C718 /* ElderDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElderDAO.swift; sourceTree = "<group>"; };
 		652FEE57238F60140093C718 /* NeriDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeriDAO.swift; sourceTree = "<group>"; };
 		652FEE59238F720B0093C718 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		652FEE5B238F84D30093C718 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		652FEE5D238F86C40093C718 /* DateHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelperTests.swift; sourceTree = "<group>"; };
 		65F358282388E1CB003A09B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65F3582A238CC8FD003A09B6 /* PairingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingViewController.swift; sourceTree = "<group>"; };
 		65F3582E238CC9C8003A09B6 /* EldersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldersListViewController.swift; sourceTree = "<group>"; };
@@ -336,6 +340,7 @@
 				652FEE4A238E308C0093C718 /* RandomNumberGenerator.swift */,
 				652FEE42238E15620093C718 /* PairingCodeGenerator.swift */,
 				652FEE59238F720B0093C718 /* GlobalConstants.swift */,
+				652FEE5B238F84D30093C718 /* DateHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				652DF2EC232EF0380067BB01 /* PairingCodeGeneratorTests.swift */,
+				652FEE5D238F86C40093C718 /* DateHelperTests.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -740,6 +746,7 @@
 				652FEE53238F5DC80093C718 /* Caregiver.swift in Sources */,
 				652FEE3E238E09960093C718 /* SignUpElderViewController.swift in Sources */,
 				652FEE4F238E363C0093C718 /* PairingCodeViewController.swift in Sources */,
+				652FEE5C238F84D30093C718 /* DateHelper.swift in Sources */,
 				65F3582B238CC8FD003A09B6 /* PairingViewController.swift in Sources */,
 				652FEE5A238F720B0093C718 /* GlobalConstants.swift in Sources */,
 				652FEE58238F60140093C718 /* NeriDAO.swift in Sources */,
@@ -763,6 +770,7 @@
 			files = (
 				652DF2ED232EF0380067BB01 /* PairingCodeGeneratorTests.swift in Sources */,
 				652FEE49238E29980093C718 /* RandomNumberGeneratorMock.swift in Sources */,
+				652FEE5E238F86C40093C718 /* DateHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
