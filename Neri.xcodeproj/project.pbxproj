@@ -32,6 +32,11 @@
 		652FEE49238E29980093C718 /* RandomNumberGeneratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE48238E29980093C718 /* RandomNumberGeneratorMock.swift */; };
 		652FEE4B238E308C0093C718 /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE4A238E308C0093C718 /* RandomNumberGenerator.swift */; };
 		652FEE4F238E363C0093C718 /* PairingCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE4E238E363C0093C718 /* PairingCodeViewController.swift */; };
+		652FEE51238F597C0093C718 /* Elder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE50238F597C0093C718 /* Elder.swift */; };
+		652FEE53238F5DC80093C718 /* Caregiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE52238F5DC80093C718 /* Caregiver.swift */; };
+		652FEE56238F5F520093C718 /* ElderDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE55238F5F520093C718 /* ElderDAO.swift */; };
+		652FEE58238F60140093C718 /* NeriDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE57238F60140093C718 /* NeriDAO.swift */; };
+		652FEE5A238F720B0093C718 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE59238F720B0093C718 /* GlobalConstants.swift */; };
 		65F358292388E1CB003A09B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65F358282388E1CB003A09B6 /* GoogleService-Info.plist */; };
 		65F3582B238CC8FD003A09B6 /* PairingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3582A238CC8FD003A09B6 /* PairingViewController.swift */; };
 		65F3582F238CC9C8003A09B6 /* EldersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3582E238CC9C8003A09B6 /* EldersListViewController.swift */; };
@@ -140,6 +145,11 @@
 		652FEE48238E29980093C718 /* RandomNumberGeneratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberGeneratorMock.swift; sourceTree = "<group>"; };
 		652FEE4A238E308C0093C718 /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
 		652FEE4E238E363C0093C718 /* PairingCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingCodeViewController.swift; sourceTree = "<group>"; };
+		652FEE50238F597C0093C718 /* Elder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Elder.swift; path = Neri/Elder.swift; sourceTree = SOURCE_ROOT; };
+		652FEE52238F5DC80093C718 /* Caregiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Caregiver.swift; path = Neri/Caregiver.swift; sourceTree = SOURCE_ROOT; };
+		652FEE55238F5F520093C718 /* ElderDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElderDAO.swift; sourceTree = "<group>"; };
+		652FEE57238F60140093C718 /* NeriDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeriDAO.swift; sourceTree = "<group>"; };
+		652FEE59238F720B0093C718 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		65F358282388E1CB003A09B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65F3582A238CC8FD003A09B6 /* PairingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingViewController.swift; sourceTree = "<group>"; };
 		65F3582E238CC9C8003A09B6 /* EldersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldersListViewController.swift; sourceTree = "<group>"; };
@@ -290,6 +300,9 @@
 		652DF32E232EF3370067BB01 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				652FEE54238F5F270093C718 /* Database */,
+				652FEE50238F597C0093C718 /* Elder.swift */,
+				652FEE52238F5DC80093C718 /* Caregiver.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,6 +335,7 @@
 				652FEE40238E12410093C718 /* Extensions.swift */,
 				652FEE4A238E308C0093C718 /* RandomNumberGenerator.swift */,
 				652FEE42238E15620093C718 /* PairingCodeGenerator.swift */,
+				652FEE59238F720B0093C718 /* GlobalConstants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -340,6 +354,15 @@
 				652DF2EC232EF0380067BB01 /* PairingCodeGeneratorTests.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		652FEE54238F5F270093C718 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				652FEE55238F5F520093C718 /* ElderDAO.swift */,
+				652FEE57238F60140093C718 /* NeriDAO.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		65F3582C238CC9A5003A09B6 /* Elders */ = {
@@ -713,9 +736,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				652DF2DA232EF0360067BB01 /* ViewController.swift in Sources */,
+				652FEE51238F597C0093C718 /* Elder.swift in Sources */,
+				652FEE53238F5DC80093C718 /* Caregiver.swift in Sources */,
 				652FEE3E238E09960093C718 /* SignUpElderViewController.swift in Sources */,
 				652FEE4F238E363C0093C718 /* PairingCodeViewController.swift in Sources */,
 				65F3582B238CC8FD003A09B6 /* PairingViewController.swift in Sources */,
+				652FEE5A238F720B0093C718 /* GlobalConstants.swift in Sources */,
+				652FEE58238F60140093C718 /* NeriDAO.swift in Sources */,
 				652DF2D8232EF0360067BB01 /* AppDelegate.swift in Sources */,
 				65F3582F238CC9C8003A09B6 /* EldersListViewController.swift in Sources */,
 				652FEE43238E15620093C718 /* PairingCodeGenerator.swift in Sources */,
@@ -724,6 +751,7 @@
 				652DF332232EF3690067BB01 /* GradientView.swift in Sources */,
 				652FEE4B238E308C0093C718 /* RandomNumberGenerator.swift in Sources */,
 				652DF34F232EFE240067BB01 /* InitialViewController.swift in Sources */,
+				652FEE56238F5F520093C718 /* ElderDAO.swift in Sources */,
 				652FEE41238E12410093C718 /* Extensions.swift in Sources */,
 				65F35833238CD62A003A09B6 /* Validators.swift in Sources */,
 			);

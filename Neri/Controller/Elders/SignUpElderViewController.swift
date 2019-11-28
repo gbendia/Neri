@@ -83,6 +83,8 @@ class ElderSignUpViewController: BasicFormViewController {
             return
         }
         
+        // Fill and save elder
+        
         performSegue(withIdentifier: "goToPairingCode", sender: self)
     }
 }

@@ -9,7 +9,7 @@ class PairingCodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pairingCodeUpdatingTimer = Timer.scheduledTimer(timeInterval: TimeInterval(2 * ONE_MINUTE), target: self, selector: #selector(updatePairingCode), userInfo: nil, repeats: true)
+        pairingCodeUpdatingTimer = Timer.scheduledTimer(timeInterval: TimeInterval(PAIRING_CODE_VALID_PERIOD), target: self, selector: #selector(updatePairingCode), userInfo: nil, repeats: true)
         
         pairingCodeUpdatingTimer?.fire()
     }
@@ -33,7 +33,5 @@ class PairingCodeViewController: UIViewController {
         
         self.dismiss(animated: true)
     }
-    
-    private let ONE_MINUTE = 60
     
 }
