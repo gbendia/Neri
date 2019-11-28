@@ -20,7 +20,7 @@ class PairingCodeViewController: UIViewController {
     
     @objc func updatePairingCode() {
         let newCode = PairingCodeGenerator.generate()
-        
+        Elder.singleton.codeCreatedAt = Date()
         // Update code on database
         
         DispatchQueue.main.async {
