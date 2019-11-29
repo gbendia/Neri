@@ -20,8 +20,10 @@ class PairingCodeViewController: UIViewController {
     
     @objc func updatePairingCode() {
         let newCode = PairingCodeGenerator.generate()
+        Elder.singleton.pairingCode = newCode
         Elder.singleton.codeCreatedAt = Date()
-        // Update code on database
+        
+        ElderDAO.updateElder()
         
         DispatchQueue.main.async {
             self.pairingCodeLabel.text = newCode
@@ -29,8 +31,6 @@ class PairingCodeViewController: UIViewController {
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
-        // Delete from database
-        
         self.dismiss(animated: true)
     }
     

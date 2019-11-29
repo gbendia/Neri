@@ -3,9 +3,9 @@ import Firebase
 
 class NeriDAO {
     
-    private let db = Firestore.firestore()
+    private static let db = Firestore.firestore()
     
-    func save(collection: String, data: [String: Any], completionHandler: @escaping () -> Void) -> String? {
+    static func save(collection: String, data: [String: Any], completionHandler: @escaping () -> Void) -> String? {
         var ref: DocumentReference? = nil
         ref = db.collection(collection).addDocument(data: data) { err in
             if let err = err {
@@ -20,7 +20,7 @@ class NeriDAO {
         return ref?.documentID
     }
     
-    func getDocumentByID(collection: String, id: String, completionHandler: @escaping ([String: Any]) -> Void) {
+    static func getDocumentByID(collection: String, id: String, completionHandler: @escaping ([String: Any]) -> Void) {
         let docRef = db.collection(collection).document(id)
         
         docRef.getDocument { (document, error) in
@@ -33,7 +33,7 @@ class NeriDAO {
         }
     }
     
-    func queryDocumentByField(collection: String, queryField: String, queryValue: Any, completionHandler: @escaping ([[String: Any]]) -> Void) {
+    static func queryDocumentByField(collection: String, queryField: String, queryValue: Any, completionHandler: @escaping ([[String: Any]]) -> Void) {
         db.collection(collection).whereField(queryField, isEqualTo: queryValue).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -49,7 +49,7 @@ class NeriDAO {
         }
     }
     
-    func update(collection: String, data: [String: Any], id: String, completionHandler: @escaping () -> Void) {
+    static func update(collection: String, data: [String: Any], id: String, completionHandler: @escaping () -> Void) {
         db.collection(collection).document(id).setData(data) { err in
             if let err = err {
                 print("Error updating document: \(err)")

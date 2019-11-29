@@ -39,6 +39,13 @@
 		652FEE5A238F720B0093C718 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE59238F720B0093C718 /* GlobalConstants.swift */; };
 		652FEE5C238F84D30093C718 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE5B238F84D30093C718 /* DateHelper.swift */; };
 		652FEE5E238F86C40093C718 /* DateHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE5D238F86C40093C718 /* DateHelperTests.swift */; };
+		6554D06B2390D75300973C7E /* MainElderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D06A2390D75300973C7E /* MainElderViewController.swift */; };
+		6554D0712390DD7300973C7E /* ElderMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0702390DD7300973C7E /* ElderMonitor.swift */; };
+		6554D0732390DE0F00973C7E /* HeartRateMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0722390DE0F00973C7E /* HeartRateMonitor.swift */; };
+		6554D0752390DE4700973C7E /* MonitorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0742390DE4700973C7E /* MonitorInterface.swift */; };
+		6554D0772390DEAC00973C7E /* LocationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0762390DEAC00973C7E /* LocationMonitor.swift */; };
+		6554D0792390DEBD00973C7E /* MotionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0782390DEBD00973C7E /* MotionMonitor.swift */; };
+		6554D07B2390E19000973C7E /* EditElderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D07A2390E19000973C7E /* EditElderViewController.swift */; };
 		65F358292388E1CB003A09B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65F358282388E1CB003A09B6 /* GoogleService-Info.plist */; };
 		65F3582B238CC8FD003A09B6 /* PairingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3582A238CC8FD003A09B6 /* PairingViewController.swift */; };
 		65F3582F238CC9C8003A09B6 /* EldersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3582E238CC9C8003A09B6 /* EldersListViewController.swift */; };
@@ -154,6 +161,13 @@
 		652FEE59238F720B0093C718 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		652FEE5B238F84D30093C718 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		652FEE5D238F86C40093C718 /* DateHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelperTests.swift; sourceTree = "<group>"; };
+		6554D06A2390D75300973C7E /* MainElderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainElderViewController.swift; sourceTree = "<group>"; };
+		6554D0702390DD7300973C7E /* ElderMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElderMonitor.swift; sourceTree = "<group>"; };
+		6554D0722390DE0F00973C7E /* HeartRateMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateMonitor.swift; sourceTree = "<group>"; };
+		6554D0742390DE4700973C7E /* MonitorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorInterface.swift; sourceTree = "<group>"; };
+		6554D0762390DEAC00973C7E /* LocationMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMonitor.swift; sourceTree = "<group>"; };
+		6554D0782390DEBD00973C7E /* MotionMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionMonitor.swift; sourceTree = "<group>"; };
+		6554D07A2390E19000973C7E /* EditElderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditElderViewController.swift; sourceTree = "<group>"; };
 		65F358282388E1CB003A09B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65F3582A238CC8FD003A09B6 /* PairingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingViewController.swift; sourceTree = "<group>"; };
 		65F3582E238CC9C8003A09B6 /* EldersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldersListViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +317,7 @@
 		652DF32E232EF3370067BB01 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6554D06E2390DD4C00973C7E /* Monitoring */,
 				652FEE54238F5F270093C718 /* Database */,
 				652FEE50238F597C0093C718 /* Elder.swift */,
 				652FEE52238F5DC80093C718 /* Caregiver.swift */,
@@ -365,10 +380,22 @@
 		652FEE54238F5F270093C718 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				652FEE55238F5F520093C718 /* ElderDAO.swift */,
 				652FEE57238F60140093C718 /* NeriDAO.swift */,
+				652FEE55238F5F520093C718 /* ElderDAO.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		6554D06E2390DD4C00973C7E /* Monitoring */ = {
+			isa = PBXGroup;
+			children = (
+				6554D0702390DD7300973C7E /* ElderMonitor.swift */,
+				6554D0722390DE0F00973C7E /* HeartRateMonitor.swift */,
+				6554D0742390DE4700973C7E /* MonitorInterface.swift */,
+				6554D0762390DEAC00973C7E /* LocationMonitor.swift */,
+				6554D0782390DEBD00973C7E /* MotionMonitor.swift */,
+			);
+			path = Monitoring;
 			sourceTree = "<group>";
 		};
 		65F3582C238CC9A5003A09B6 /* Elders */ = {
@@ -376,6 +403,8 @@
 			children = (
 				652FEE3D238E09960093C718 /* SignUpElderViewController.swift */,
 				652FEE4E238E363C0093C718 /* PairingCodeViewController.swift */,
+				6554D06A2390D75300973C7E /* MainElderViewController.swift */,
+				6554D07A2390E19000973C7E /* EditElderViewController.swift */,
 			);
 			path = Elders;
 			sourceTree = "<group>";
@@ -743,22 +772,29 @@
 			files = (
 				652DF2DA232EF0360067BB01 /* ViewController.swift in Sources */,
 				652FEE51238F597C0093C718 /* Elder.swift in Sources */,
+				6554D0752390DE4700973C7E /* MonitorInterface.swift in Sources */,
 				652FEE53238F5DC80093C718 /* Caregiver.swift in Sources */,
 				652FEE3E238E09960093C718 /* SignUpElderViewController.swift in Sources */,
 				652FEE4F238E363C0093C718 /* PairingCodeViewController.swift in Sources */,
 				652FEE5C238F84D30093C718 /* DateHelper.swift in Sources */,
 				65F3582B238CC8FD003A09B6 /* PairingViewController.swift in Sources */,
+				6554D07B2390E19000973C7E /* EditElderViewController.swift in Sources */,
 				652FEE5A238F720B0093C718 /* GlobalConstants.swift in Sources */,
 				652FEE58238F60140093C718 /* NeriDAO.swift in Sources */,
+				6554D06B2390D75300973C7E /* MainElderViewController.swift in Sources */,
 				652DF2D8232EF0360067BB01 /* AppDelegate.swift in Sources */,
 				65F3582F238CC9C8003A09B6 /* EldersListViewController.swift in Sources */,
+				6554D0712390DD7300973C7E /* ElderMonitor.swift in Sources */,
 				652FEE43238E15620093C718 /* PairingCodeGenerator.swift in Sources */,
 				652DF350232EFE240067BB01 /* LoadingViewController.swift in Sources */,
 				65F35831238CCB60003A09B6 /* BasicFormViewController.swift in Sources */,
+				6554D0772390DEAC00973C7E /* LocationMonitor.swift in Sources */,
 				652DF332232EF3690067BB01 /* GradientView.swift in Sources */,
 				652FEE4B238E308C0093C718 /* RandomNumberGenerator.swift in Sources */,
+				6554D0792390DEBD00973C7E /* MotionMonitor.swift in Sources */,
 				652DF34F232EFE240067BB01 /* InitialViewController.swift in Sources */,
 				652FEE56238F5F520093C718 /* ElderDAO.swift in Sources */,
+				6554D0732390DE0F00973C7E /* HeartRateMonitor.swift in Sources */,
 				652FEE41238E12410093C718 /* Extensions.swift in Sources */,
 				65F35833238CD62A003A09B6 /* Validators.swift in Sources */,
 			);

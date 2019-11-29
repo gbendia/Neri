@@ -7,8 +7,8 @@ class Elder {
     // MARK: - Personal Information
     var name: String = ""
     var birthday: Date = Date()
-    var weight: Float = 0.0
-    var height: Float = 0.0
+    var weight: String = ""
+    var height: String = ""
     var address: String = ""
     var city: String = ""
     var state: String = ""

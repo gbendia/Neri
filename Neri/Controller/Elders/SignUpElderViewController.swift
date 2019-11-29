@@ -11,6 +11,9 @@ class ElderSignUpViewController: BasicFormViewController {
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
+    @IBOutlet weak var loadingBackground: UIView!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    
     private var textFields: [UITextField] = []
     
     override func viewDidLoad() {
@@ -26,6 +29,9 @@ class ElderSignUpViewController: BasicFormViewController {
         hideKeyboardWhenTappingOutsideTextField()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        loadingBackground.isHidden = true
+        loading.isHidden = true
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -83,16 +89,23 @@ class ElderSignUpViewController: BasicFormViewController {
             return
         }
         
-        // Fill and save elder
+        loadingBackground.isHidden = false
+        loading.isHidden = false
+        
         Elder.singleton.name = nameTextField.text!
         Elder.singleton.birthday = DateHelper.dateFrom(string: birthdayTextField.text!, format: DateHelper.DATE_ONLY_FORMAT)
-        Elder.singleton.weight = (weightTextField.text! as NSString).floatValue
-        Elder.singleton.height = (heightTextField.text! as NSString).floatValue
+        Elder.singleton.weight = weightTextField.text!
+        Elder.singleton.height = heightTextField.text!
         Elder.singleton.address = addressTextField.text!
         Elder.singleton.city = cityTextField.text!
         Elder.singleton.state = stateTextField.text!
         Elder.singleton.phoneNumber = phoneNumberTextField.text!
         
-        performSegue(withIdentifier: "goToPairingCode", sender: self)
+        ElderDAO.createElder(completionHandler: {
+            self.loadingBackground.isHidden = true
+            self.loading.isHidden = true
+            self.performSegue(withIdentifier: "goToPairingCode", sender: self)
+        })
+        
     }
 }
