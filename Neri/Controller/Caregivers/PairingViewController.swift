@@ -5,9 +5,15 @@ class PairingViewController: BasicFormViewController {
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var pairingCodeTextField: UITextField!
     
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappingOutsideTextField()
+        
+        loadingView.isHidden = true
+        activityIndicator.isHidden = true
     }
     
     private func hasEmptyFields() -> Bool {
@@ -22,7 +28,11 @@ class PairingViewController: BasicFormViewController {
     }
     
     private func hasValidPairingCode() -> Bool {
-        // Checar codigo no banco
+        ElderDAO.findElderWith(pairingCode: pairingCodeTextField.text!, completionHandler: {_ in 
+            
+        }, onInvalidCode: {
+            
+        })
         return false
     }
     
@@ -52,10 +62,23 @@ class PairingViewController: BasicFormViewController {
             return
         }
         
+        loadingView.isHidden = false
+        activityIndicator.isHidden = false
+        
+        ElderDAO.findElderWith(pairingCode: pairingCodeTextField.text!, completionHandler: { elderID in
+            Caregiver.singleton.phoneNumber = self.phoneNumberTextField.text!
+            Caregiver.singleton.connectedEldersIDs.append(elderID)
+            self.loadingView.isHidden = true
+            self.activityIndicator.isHidden = true
+            self.performSegue(withIdentifier: "goToEldersView", sender: self)
+        }, onInvalidCode: {
+            self.loadingView.isHidden = true
+            self.activityIndicator.isHidden = true
+            self.showInvalidFieldAlert(for: ["\"Pairing code\""])
+        })
+        
         // Salvar dados no banco
         // Checar cadastro no banco
-        
-        performSegue(withIdentifier: "goToEldersView", sender: self)
     }
     
 }

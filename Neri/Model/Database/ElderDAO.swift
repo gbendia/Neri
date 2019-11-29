@@ -27,7 +27,7 @@ class ElderDAO: NeriDAO {
                                        "pairingCode": ["code": Elder.singleton.pairingCode,
                                                        "codeCreatedAt": DateHelper.stringFrom(date: Elder.singleton.codeCreatedAt, as: DateHelper.DATE_TIME_FORMAT)]]
         
-        let documentID = NeriDAO.save(collection: ELDER_COLLECTION, data: elderData, completionHandler: completionHandler)
+        let documentID = save(collection: ELDER_COLLECTION, data: elderData, completionHandler: completionHandler)
         if (documentID != nil) {
             elderID = documentID
             saveIDLocally()
@@ -56,24 +56,28 @@ class ElderDAO: NeriDAO {
         }
     }
     
-    static func getElder(completionHandler: @escaping () -> Void = {}) {
-        if (elderID != nil) {
-            getDocumentByID(collection: ELDER_COLLECTION, id: elderID!, completionHandler: { elderDocument in
+    static func getElder(id: String? = elderID, completionHandler: @escaping () -> Void = {}) {
+        if (id != nil) {
+            getDocumentByID(collection: ELDER_COLLECTION, id: id!, completionHandler: { elderDocument in
                 self.setElderSingletonAttributes(from: elderDocument)
                 completionHandler()
             })
         }
     }
     
-    static func findElderWith(pairingCode code: String, completionHandler: @escaping () -> Void = {}) {
+    static func findElderWith(pairingCode code: String, completionHandler: @escaping (String) -> Void = {_ in }, onInvalidCode: @escaping () -> Void = {}) {
         queryDocumentByField(collection: ELDER_COLLECTION, queryField: "pairingCode", queryValue: code) { elderDocuments in
             for document in elderDocuments {
                 let codeCreatedAt = DateHelper.dateFrom(string: (document["pairingCode"] as! [String: Any])["codeCreatedAt"] as! String, format: DateHelper.DATE_TIME_FORMAT)
                 if (Elder.pairingCodeIsValid(codeCreatedAt: codeCreatedAt)) {
                     self.elderID = document["documentID"] as? String
                     self.setElderSingletonAttributes(from: document)
-                    self.saveIDLocally()
-                    completionHandler()
+                    if (Elder.singleton.pairingCodeIsValid()) {
+                        self.saveIDLocally()
+                        completionHandler(elderID!)
+                    } else {
+                        onInvalidCode()
+                    }
                 }
             }
         }

@@ -16,14 +16,17 @@ class LocationMonitor: NSObject, Monitor, CLLocationManagerDelegate {
     
     func start() {
         // Ask for Authorisation from the User.
-        self.locationManager.requestAlwaysAuthorization()
-        print("Asking permission")
-        if CLLocationManager.locationServicesEnabled() {
+        if (CLLocationManager.locationServicesEnabled()) {
+            print("Asking permission")
+            self.locationManager.requestAlwaysAuthorization()
+        }
+        
+        if (CLLocationManager.locationServicesEnabled()) {
             locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
             locationManager.startUpdatingLocation()
         } else {
-            print("Not enabled")
+            print("Location service not enabled")
         }
     }
     
@@ -69,12 +72,12 @@ class LocationMonitor: NSObject, Monitor, CLLocationManagerDelegate {
                 
                 if pm.count > 0 {
                     let pm = placemarks![0]
-                    print(pm.country)
-                    print(pm.locality)
-                    print(pm.subLocality)
-                    print(pm.thoroughfare)
-                    print(pm.postalCode)
-                    print(pm.subThoroughfare)
+//                    print(pm.country)
+//                    print(pm.locality)
+//                    print(pm.subLocality)
+//                    print(pm.thoroughfare)
+//                    print(pm.postalCode)
+//                    print(pm.subThoroughfare)
                     var addressString : String = ""
                     if pm.subLocality != nil {
                         addressString = addressString + pm.subLocality! + ", "

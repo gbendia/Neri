@@ -19,7 +19,7 @@ class MainElderViewController: UIViewController, ElderMonitorDelegate {
     
     override func viewDidLoad() {
         nameLabel.text = Elder.singleton.name
-        ageLabel.text = String(Elder.singleton.age())
+        ageLabel.text = "\(Elder.singleton.age()) years"
         
         monitor.setDelegate(delegate: self)
         monitor.start()

@@ -21,6 +21,7 @@ class ElderSignUpViewController: BasicFormViewController {
         textFields = [nameTextField,
                       birthdayTextField,
                       weightTextField,
+                      heightTextField,
                       addressTextField,
                       cityTextField,
                       stateTextField,
@@ -32,6 +33,10 @@ class ElderSignUpViewController: BasicFormViewController {
         
         loadingBackground.isHidden = true
         loading.isHidden = true
+        
+        for textField in textFields {
+            textField.attributedPlaceholder = NSAttributedString(string: textField.placeholder!, attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+        }
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {

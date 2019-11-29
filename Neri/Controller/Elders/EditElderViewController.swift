@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class EditElderViewController: UIViewController {
+class EditElderViewController: BasicFormViewController {
     
     var pairingCodeUpdatingTimer: Timer?
     
@@ -50,6 +50,8 @@ class EditElderViewController: UIViewController {
             label.isHidden = false
             label.superview!.addSubview(textField)
         }
+        
+        hideKeyboardWhenTappingOutsideTextField()
         
         pairingCodeUpdatingTimer = Timer.scheduledTimer(timeInterval: TimeInterval(PAIRING_CODE_VALID_PERIOD), target: self, selector: #selector(updatePairingCode), userInfo: nil, repeats: true)
         

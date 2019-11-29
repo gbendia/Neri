@@ -46,6 +46,8 @@
 		6554D0772390DEAC00973C7E /* LocationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0762390DEAC00973C7E /* LocationMonitor.swift */; };
 		6554D0792390DEBD00973C7E /* MotionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0782390DEBD00973C7E /* MotionMonitor.swift */; };
 		6554D07B2390E19000973C7E /* EditElderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D07A2390E19000973C7E /* EditElderViewController.swift */; };
+		65BB66CC23919B8700E7B8D5 /* EldersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB66CB23919B8700E7B8D5 /* EldersCollectionViewCell.swift */; };
+		65BB66CE23919FEF00E7B8D5 /* CaregiverDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB66CD23919FEF00E7B8D5 /* CaregiverDAO.swift */; };
 		65F358292388E1CB003A09B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65F358282388E1CB003A09B6 /* GoogleService-Info.plist */; };
 		65F3582B238CC8FD003A09B6 /* PairingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3582A238CC8FD003A09B6 /* PairingViewController.swift */; };
 		65F3582F238CC9C8003A09B6 /* EldersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3582E238CC9C8003A09B6 /* EldersListViewController.swift */; };
@@ -168,6 +170,8 @@
 		6554D0762390DEAC00973C7E /* LocationMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMonitor.swift; sourceTree = "<group>"; };
 		6554D0782390DEBD00973C7E /* MotionMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionMonitor.swift; sourceTree = "<group>"; };
 		6554D07A2390E19000973C7E /* EditElderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditElderViewController.swift; sourceTree = "<group>"; };
+		65BB66CB23919B8700E7B8D5 /* EldersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldersCollectionViewCell.swift; sourceTree = "<group>"; };
+		65BB66CD23919FEF00E7B8D5 /* CaregiverDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaregiverDAO.swift; sourceTree = "<group>"; };
 		65F358282388E1CB003A09B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65F3582A238CC8FD003A09B6 /* PairingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingViewController.swift; sourceTree = "<group>"; };
 		65F3582E238CC9C8003A09B6 /* EldersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldersListViewController.swift; sourceTree = "<group>"; };
@@ -331,6 +335,7 @@
 				652DF2E0232EF0380067BB01 /* LaunchScreen.storyboard */,
 				652DF337232EFD6E0067BB01 /* Main.storyboard */,
 				652DF331232EF3690067BB01 /* GradientView.swift */,
+				65BB66CB23919B8700E7B8D5 /* EldersCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 			children = (
 				652FEE57238F60140093C718 /* NeriDAO.swift */,
 				652FEE55238F5F520093C718 /* ElderDAO.swift */,
+				65BB66CD23919FEF00E7B8D5 /* CaregiverDAO.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -785,6 +791,7 @@
 				652DF2D8232EF0360067BB01 /* AppDelegate.swift in Sources */,
 				65F3582F238CC9C8003A09B6 /* EldersListViewController.swift in Sources */,
 				6554D0712390DD7300973C7E /* ElderMonitor.swift in Sources */,
+				65BB66CE23919FEF00E7B8D5 /* CaregiverDAO.swift in Sources */,
 				652FEE43238E15620093C718 /* PairingCodeGenerator.swift in Sources */,
 				652DF350232EFE240067BB01 /* LoadingViewController.swift in Sources */,
 				65F35831238CCB60003A09B6 /* BasicFormViewController.swift in Sources */,
@@ -793,6 +800,7 @@
 				652FEE4B238E308C0093C718 /* RandomNumberGenerator.swift in Sources */,
 				6554D0792390DEBD00973C7E /* MotionMonitor.swift in Sources */,
 				652DF34F232EFE240067BB01 /* InitialViewController.swift in Sources */,
+				65BB66CC23919B8700E7B8D5 /* EldersCollectionViewCell.swift in Sources */,
 				652FEE56238F5F520093C718 /* ElderDAO.swift in Sources */,
 				6554D0732390DE0F00973C7E /* HeartRateMonitor.swift in Sources */,
 				652FEE41238E12410093C718 /* Extensions.swift in Sources */,
