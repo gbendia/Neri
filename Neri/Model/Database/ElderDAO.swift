@@ -21,10 +21,11 @@ class ElderDAO: NeriDAO {
                                        "phoneNumber": Elder.singleton.phoneNumber,
                                        "emergencyPhone": Elder.singleton.emergencyPhone,
                                        "heartRate": Elder.singleton.heartRate,
-//                                       "location": ...,
-                                        "fallDetected": Elder.singleton.fallDetected,
-                                        "pairingCode": ["code": Elder.singleton.pairingCode,
-                                                        "codeCreatedAt": DateHelper.stringFrom(date: Elder.singleton.codeCreatedAt, as: DateHelper.DATE_TIME_FORMAT)]]
+                                       "location": ["latitude": Elder.singleton.latitude,
+                                                    "longitude": Elder.singleton.longitude],
+                                       "fallDetected": Elder.singleton.fallDetected,
+                                       "pairingCode": ["code": Elder.singleton.pairingCode,
+                                                       "codeCreatedAt": DateHelper.stringFrom(date: Elder.singleton.codeCreatedAt, as: DateHelper.DATE_TIME_FORMAT)]]
         
         let documentID = NeriDAO.save(collection: ELDER_COLLECTION, data: elderData, completionHandler: completionHandler)
         if (documentID != nil) {
@@ -45,7 +46,8 @@ class ElderDAO: NeriDAO {
                                            "phoneNumber": Elder.singleton.phoneNumber,
                                            "emergencyPhone": Elder.singleton.emergencyPhone,
                                            "heartRate": Elder.singleton.heartRate,
-//                                       "location": ...,
+                                           "location": ["latitude": Elder.singleton.latitude,
+                                                        "longitude": Elder.singleton.longitude],
                                            "fallDetected": Elder.singleton.fallDetected,
                                            "pairingCode": ["code": Elder.singleton.pairingCode,
                                                            "codeCreatedAt": DateHelper.stringFrom(date: Elder.singleton.codeCreatedAt, as: DateHelper.DATE_TIME_FORMAT)]]
@@ -54,15 +56,16 @@ class ElderDAO: NeriDAO {
         }
     }
     
-    static func getElder() {
+    static func getElder(completionHandler: @escaping () -> Void = {}) {
         if (elderID != nil) {
             getDocumentByID(collection: ELDER_COLLECTION, id: elderID!, completionHandler: { elderDocument in
                 self.setElderSingletonAttributes(from: elderDocument)
+                completionHandler()
             })
         }
     }
     
-    static func findElderWith(pairingCode code: String) {
+    static func findElderWith(pairingCode code: String, completionHandler: @escaping () -> Void = {}) {
         queryDocumentByField(collection: ELDER_COLLECTION, queryField: "pairingCode", queryValue: code) { elderDocuments in
             for document in elderDocuments {
                 let codeCreatedAt = DateHelper.dateFrom(string: (document["pairingCode"] as! [String: Any])["codeCreatedAt"] as! String, format: DateHelper.DATE_TIME_FORMAT)
@@ -70,6 +73,7 @@ class ElderDAO: NeriDAO {
                     self.elderID = document["documentID"] as? String
                     self.setElderSingletonAttributes(from: document)
                     self.saveIDLocally()
+                    completionHandler()
                 }
             }
         }
@@ -78,7 +82,7 @@ class ElderDAO: NeriDAO {
     private static func setElderSingletonAttributes(from document: [String: Any]) {
         // Setting personal information
         Elder.singleton.name = document["name"] as! String
-        Elder.singleton.birthday = DateHelper.dateFrom(string: document["birtday"] as! String, format: DateHelper.DATE_ONLY_FORMAT)
+        Elder.singleton.birthday = DateHelper.dateFrom(string: document["birthday"] as! String, format: DateHelper.DATE_ONLY_FORMAT)
         Elder.singleton.weight = document["weight"] as! String
         Elder.singleton.height = document["height"] as! String
         Elder.singleton.address = document["address"] as! String
@@ -89,16 +93,35 @@ class ElderDAO: NeriDAO {
         
         // Setting tracking information
         Elder.singleton.heartRate = document["heartRate"] as! Int
-        //                Elder.singleton.location = ...
+        let location = (document["location"] as! [String: String])
+        Elder.singleton.latitude = location["latitude"]!
+        Elder.singleton.longitude = location["longitude"]!
         Elder.singleton.fallDetected = document["fallDetected"] as! Bool
         
         // Setting pairing code information
-        Elder.singleton.pairingCode = document["pairingCode"] as! String
-        Elder.singleton.codeCreatedAt = DateHelper.dateFrom(string: document["codeCreatedAt"] as! String, format: DateHelper.DATE_TIME_FORMAT)
+        let pairingCode = document["pairingCode"] as! [String: String]
+        Elder.singleton.pairingCode = pairingCode["code"]!
+        Elder.singleton.codeCreatedAt = DateHelper.dateFrom(string: pairingCode["codeCreatedAt"]!, format: DateHelper.DATE_TIME_FORMAT)
     }
     
     private static func saveIDLocally() {
-        
+        let defaults = UserDefaults.standard
+        defaults.set(elderID, forKey: "currentElderID")
+    }
+    
+    static func getCurrentElder(onSuccess: @escaping () -> Void, onFailure: @escaping () -> Void) {
+        let defaults = UserDefaults.standard
+        if let elderID = defaults.string(forKey: "currentElderID") {
+            print("Found elder with [ID:\(elderID)]")
+            self.elderID = elderID
+            self.getElder {
+                onSuccess()
+            }
+            return
+        } else {
+            print("No elder currently selected")
+            onFailure()
+        }
     }
     
 }

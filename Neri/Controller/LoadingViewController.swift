@@ -4,12 +4,14 @@ class LoadingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Load info from plist to login automatically
-        let seconds = 2.0
-        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        ElderDAO.getCurrentElder(onSuccess: {
+            self.performSegue(withIdentifier: "showElder", sender: self)
+        }, onFailure: {
             self.performSegue(withIdentifier: "showInitial", sender: self)
-        }
+        })
     }
     
 }

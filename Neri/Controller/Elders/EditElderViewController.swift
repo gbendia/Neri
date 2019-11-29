@@ -72,7 +72,7 @@ class EditElderViewController: UIViewController {
         phoneLabel.text = Elder.singleton.phoneNumber
         emergencyPhoneLabel.text = Elder.singleton.emergencyPhone
         
-        confirmButton.imageView!.frame = CGRect(x: 20, y: 0, width: 20, height: 40)
+        confirmButton.imageView!.frame = CGRect(x: 25, y: 0, width: 15, height: 40)
     }
     
     private func getLabelRect(_ label: UILabel) -> CGRect {

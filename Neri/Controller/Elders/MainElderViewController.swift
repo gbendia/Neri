@@ -2,9 +2,10 @@ import Foundation
 import UIKit
 import MapKit
 
-class MainElderViewController: UIViewController {
+class MainElderViewController: UIViewController, ElderMonitorDelegate {
     
     var updateInfoTimer: Timer?
+    let monitor = ElderMonitor()
     
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -20,7 +21,8 @@ class MainElderViewController: UIViewController {
         nameLabel.text = Elder.singleton.name
         ageLabel.text = String(Elder.singleton.age())
         
-        ElderMonitor().start()
+        monitor.setDelegate(delegate: self)
+        monitor.start()
         
         super.viewDidLoad()
     }
@@ -58,14 +60,21 @@ class MainElderViewController: UIViewController {
         }
     }
     
-    private func setLocationView() {
-        // TODO
-    }
-    
     @objc private func updateView() {
         setHeartRateDataView()
         setMotionDataView()
-        setLocationView()
+    }
+    
+    func didUpdate(location: CLLocationCoordinate2D) {
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        monitor.getLocationAddress(completionHandler: { address in
+            annotation.title = address
+            self.map.removeAnnotations(self.map.annotations)
+            self.map.addAnnotation(annotation)
+            let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 300, longitudinalMeters: 300)
+            self.map.setRegion(viewRegion, animated: false)
+        })
     }
     
 }
