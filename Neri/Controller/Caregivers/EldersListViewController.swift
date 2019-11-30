@@ -4,7 +4,6 @@ class EldersListViewController: UIViewController, UICollectionViewDelegate, UICo
     
     @IBOutlet weak var eldersCollection: UICollectionView!
     
-    var eldersPhotos = [UIImage?]()
     var eldersNames = [String]()
     
     override func viewDidLoad() {
@@ -13,6 +12,7 @@ class EldersListViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     @IBAction func addElderPressed(_ sender: Any) {
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -21,8 +21,7 @@ class EldersListViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "elderCell", for: indexPath) as! EldersCollectionViewCell
-        let photo = eldersPhotos[indexPath.row] ?? UIImage(named: "nophoto")!
-        cell.displayElder(photo: photo, name: eldersNames[indexPath.row])
+//        cell.displayElder(name: eldersNames[indexPath.row])
         
         return cell
     }

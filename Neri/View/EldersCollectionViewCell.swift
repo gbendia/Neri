@@ -2,12 +2,12 @@ import UIKit
 
 class EldersCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var photoImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var ageLabel: UILabel!
     
-    func displayElder(photo: UIImage, name: String) {
-        photoImageView.image = photo
+    func displayElder(name: String, age: Int) {
         nameLabel.text = name
+        
     }
     
 }

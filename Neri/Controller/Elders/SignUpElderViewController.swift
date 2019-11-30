@@ -1,6 +1,6 @@
 import UIKit
 
-class ElderSignUpViewController: BasicFormViewController {
+class ElderSignUpViewController: BasicFormViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var birthdayTextField: UITextField!
@@ -74,10 +74,6 @@ class ElderSignUpViewController: BasicFormViewController {
         return invalidFields
     }
     
-    @IBAction func addPhotoClicked(_ sender: Any) {
-        
-    }
-    
     @IBAction func backButtonClicked(_ sender: Any) {
         self.dismiss(animated: true)
     }
@@ -111,6 +107,6 @@ class ElderSignUpViewController: BasicFormViewController {
             self.loading.isHidden = true
             self.performSegue(withIdentifier: "goToPairingCode", sender: self)
         })
-        
     }
+    
 }

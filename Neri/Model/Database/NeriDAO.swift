@@ -1,9 +1,11 @@
 import Foundation
 import Firebase
+import FirebaseStorage
 
 class NeriDAO {
     
     private static let db = Firestore.firestore()
+    private static let storageRef = Storage.storage(url:"gs://neri-fe29b.appspot.com").reference()
     
     static func save(collection: String, data: [String: Any], completionHandler: @escaping () -> Void) -> String? {
         var ref: DocumentReference? = nil

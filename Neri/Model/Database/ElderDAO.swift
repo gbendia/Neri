@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 class ElderDAO: NeriDAO {
     
@@ -7,7 +8,6 @@ class ElderDAO: NeriDAO {
     private override init() {}
     
     private static var elderID: String? = nil
-    
     private static let ELDER_COLLECTION = "elders"
     
     static func createElder(completionHandler: @escaping () -> Void = {}) {

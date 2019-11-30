@@ -63,9 +63,8 @@ class EditElderViewController: BasicFormViewController {
     }
     
     private func setView() {
-        // set photo
         nameLabel.text = Elder.singleton.name
-        ageLabel.text = String(Elder.singleton.age())
+        ageLabel.text = "\(Elder.singleton.age()) years"
         birthdayLabel.text = DateHelper.stringFrom(date: Elder.singleton.birthday, as: DateHelper.DATE_ONLY_FORMAT)
         weightLabel.text = Elder.singleton.weight
         heightLabel.text = Elder.singleton.height
@@ -116,6 +115,7 @@ class EditElderViewController: BasicFormViewController {
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
+        endEditing()
         self.dismiss(animated: true)
     }
     

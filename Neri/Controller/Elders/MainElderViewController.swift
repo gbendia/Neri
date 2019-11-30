@@ -7,7 +7,6 @@ class MainElderViewController: UIViewController, ElderMonitorDelegate {
     var updateInfoTimer: Timer?
     let monitor = ElderMonitor()
     
-    @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var heartRateView: UIView!
@@ -75,6 +74,14 @@ class MainElderViewController: UIViewController, ElderMonitorDelegate {
             let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 300, longitudinalMeters: 300)
             self.map.setRegion(viewRegion, animated: false)
         })
+    }
+    
+    @IBAction func callButtonPressed(_ sender: Any) {
+        if (!Elder.singleton.emergencyPhone.isEmpty) {
+            if let number = URL(string: "tel://\(Elder.singleton.emergencyPhone)") {
+                UIApplication.shared.open(number)
+            }
+        }
     }
     
 }
