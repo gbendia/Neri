@@ -40,6 +40,10 @@ class PairingViewController: BasicFormViewController {
         return PhoneValidator.isValid(phoneNumberTextField.text!)
     }
     
+    private func finishPairing() {
+        CaregiverDAO.createCaregiver()
+    }
+    
     @IBAction func backButtonClicked(_ sender: Any) {
         self.dismiss(animated: true)
     }
@@ -77,8 +81,7 @@ class PairingViewController: BasicFormViewController {
             self.showInvalidFieldAlert(for: ["\"Pairing code\""])
         })
         
-        // Salvar dados no banco
-        // Checar cadastro no banco
+        
     }
     
 }

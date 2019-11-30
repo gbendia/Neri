@@ -490,6 +490,28 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLh-xz-4KP">
                                         <rect key="frame" x="0.0" y="182" width="375" height="519"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="etN-CU-pCn">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="483"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8a9-to-0eK">
+                                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8a9-to-0eK" id="cLd-6h-mm2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="etN-CU-pCn" firstAttribute="leading" secondItem="CLh-xz-4KP" secondAttribute="leading" id="PLg-3d-OnU"/>
+                                            <constraint firstAttribute="trailing" secondItem="etN-CU-pCn" secondAttribute="trailing" id="Q5g-Y3-ZYj"/>
+                                            <constraint firstItem="etN-CU-pCn" firstAttribute="top" secondItem="CLh-xz-4KP" secondAttribute="top" id="QtT-ng-qor"/>
+                                            <constraint firstAttribute="bottom" secondItem="etN-CU-pCn" secondAttribute="bottom" constant="36" id="etZ-8v-tSM"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <accessibility key="accessibilityConfiguration">
@@ -538,7 +560,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLT-TO-Ozb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="-365"/>
+            <point key="canvasLocation" x="380" y="-365.66716641679164"/>
         </scene>
         <!--Pairing View Controller-->
         <scene sceneID="YOz-3W-GBu">

@@ -59,7 +59,7 @@ class CaregiverDAO: NeriDAO {
             }
             return
         } else {
-            print("No caregiver currently selected")
+            print("No caregiver currently logged")
             onFailure()
         }
     }

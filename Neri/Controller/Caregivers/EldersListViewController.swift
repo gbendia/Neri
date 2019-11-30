@@ -1,8 +1,8 @@
 import UIKit
 
-class EldersListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class EldersListViewController: UIViewController {
     
-    @IBOutlet weak var eldersCollection: UICollectionView!
+    @IBOutlet weak var eldersTableView: UITableView!
     
     var eldersNames = [String]()
     
@@ -13,17 +13,6 @@ class EldersListViewController: UIViewController, UICollectionViewDelegate, UICo
     
     @IBAction func addElderPressed(_ sender: Any) {
         
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Caregiver.singleton.connectedEldersIDs.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "elderCell", for: indexPath) as! EldersCollectionViewCell
-//        cell.displayElder(name: eldersNames[indexPath.row])
-        
-        return cell
     }
     
 }

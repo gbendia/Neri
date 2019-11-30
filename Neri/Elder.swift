@@ -40,7 +40,7 @@ class Elder {
         return expirationDate > Date()
     }
     
-    static func pairingCodeIsValid(codeCreatedAt: Date) -> Bool {
+    func pairingCodeIsValid(codeCreatedAt: Date) -> Bool {
         let expirationDate = codeCreatedAt.addingTimeInterval(PAIRING_CODE_VALID_PERIOD)
         return expirationDate > Date()
     }

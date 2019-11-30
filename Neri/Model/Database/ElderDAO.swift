@@ -3,8 +3,6 @@ import UIKit
 
 class ElderDAO: NeriDAO {
     
-    let dao = ElderDAO()
-    
     private override init() {}
     
     private static var elderID: String? = nil
@@ -69,7 +67,7 @@ class ElderDAO: NeriDAO {
         queryDocumentByField(collection: ELDER_COLLECTION, queryField: "pairingCode", queryValue: code) { elderDocuments in
             for document in elderDocuments {
                 let codeCreatedAt = DateHelper.dateFrom(string: (document["pairingCode"] as! [String: Any])["codeCreatedAt"] as! String, format: DateHelper.DATE_TIME_FORMAT)
-                if (Elder.pairingCodeIsValid(codeCreatedAt: codeCreatedAt)) {
+                if (Elder.singleton.pairingCodeIsValid(codeCreatedAt: codeCreatedAt)) {
                     self.elderID = document["documentID"] as? String
                     self.setElderSingletonAttributes(from: document)
                     if (Elder.singleton.pairingCodeIsValid()) {
