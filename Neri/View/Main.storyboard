@@ -495,13 +495,40 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="483"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8a9-to-0eK">
-                                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="elderTableCell" id="8a9-to-0eK" customClass="EldersTableViewCell" customModule="Neri" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="375" height="56.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8a9-to-0eK" id="cLd-6h-mm2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1w-7m-efx">
+                                                                    <rect key="frame" x="16" y="8" width="343" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjX-C6-OGv">
+                                                                    <rect key="frame" x="16" y="30" width="343" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="B1w-7m-efx" secondAttribute="trailing" constant="16" id="B5T-0D-dh9"/>
+                                                                <constraint firstAttribute="bottom" secondItem="CjX-C6-OGv" secondAttribute="bottom" constant="8" id="FTl-Vv-VsV"/>
+                                                                <constraint firstAttribute="trailing" secondItem="CjX-C6-OGv" secondAttribute="trailing" constant="16" id="Jzb-sd-u63"/>
+                                                                <constraint firstItem="B1w-7m-efx" firstAttribute="leading" secondItem="cLd-6h-mm2" secondAttribute="leading" constant="16" id="N0R-Bo-w79"/>
+                                                                <constraint firstItem="CjX-C6-OGv" firstAttribute="leading" secondItem="cLd-6h-mm2" secondAttribute="leading" constant="16" id="blT-qH-qH2"/>
+                                                                <constraint firstItem="B1w-7m-efx" firstAttribute="top" secondItem="cLd-6h-mm2" secondAttribute="top" constant="8" id="cah-Ww-75D"/>
+                                                                <constraint firstItem="CjX-C6-OGv" firstAttribute="top" secondItem="B1w-7m-efx" secondAttribute="bottom" constant="1" id="ea8-Tv-haR"/>
+                                                            </constraints>
                                                         </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="ageLabel" destination="CjX-C6-OGv" id="ObP-3l-iHs"/>
+                                                            <outlet property="nameLabel" destination="B1w-7m-efx" id="Nza-Qz-uC0"/>
+                                                        </connections>
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
@@ -555,6 +582,7 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="eldersTableView" destination="etN-CU-pCn" id="J5R-J4-xmc"/>
                         <segue destination="S0I-Hz-CFn" kind="presentation" identifier="showElder" id="3El-Mi-09a"/>
                     </connections>
                 </viewController>
@@ -1175,14 +1203,14 @@ All you need to do is send them the code below.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="701"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QW8-6d-z3U" userLabel="linha1">
-                                        <rect key="frame" x="0.0" y="390" width="375" height="1"/>
+                                        <rect key="frame" x="0.0" y="432" width="375" height="1"/>
                                         <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="bX6-l0-eee"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pairing code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pd-Op-e4L">
-                                        <rect key="frame" x="16" y="365" width="251" height="22"/>
+                                        <rect key="frame" x="16" y="407" width="251" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="251" id="xbx-UU-cGr"/>
                                         </constraints>
@@ -1197,7 +1225,7 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Date of birth:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ase-Rq-0SC">
-                                        <rect key="frame" x="16" y="169" width="105" height="22"/>
+                                        <rect key="frame" x="16" y="155" width="105" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="kYx-L9-IDR"/>
                                         </constraints>
@@ -1206,7 +1234,7 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/08/1946" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbY-mO-Zfo">
-                                        <rect key="frame" x="129" y="169" width="140" height="22"/>
+                                        <rect key="frame" x="129" y="155" width="140" height="22"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES"/>
                                         </accessibility>
@@ -1218,7 +1246,7 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rio de Janeiro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nV0-pt-8vy">
-                                        <rect key="frame" x="60" y="259" width="170" height="22"/>
+                                        <rect key="frame" x="60" y="245" width="170" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="170" id="q2C-fF-7PM"/>
                                         </constraints>
@@ -1227,19 +1255,19 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="63 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6A-46-p2y">
-                                        <rect key="frame" x="85" y="199" width="100.5" height="22"/>
+                                        <rect key="frame" x="85" y="185" width="100.5" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1,62 m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKJ-3M-F1h">
-                                        <rect key="frame" x="258.5" y="199" width="100.5" height="22"/>
+                                        <rect key="frame" x="258.5" y="185" width="100.5" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6P-21-kfz">
-                                        <rect key="frame" x="16" y="199" width="61" height="22"/>
+                                        <rect key="frame" x="16" y="185" width="61" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="3TJ-p1-ex1"/>
                                         </constraints>
@@ -1248,7 +1276,7 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adress:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuc-yi-yZ5">
-                                        <rect key="frame" x="16" y="229" width="60" height="22"/>
+                                        <rect key="frame" x="16" y="215" width="60" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="rut-Ln-mIa"/>
                                         </constraints>
@@ -1257,7 +1285,7 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="City:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoL-15-2be">
-                                        <rect key="frame" x="16" y="259" width="36" height="22"/>
+                                        <rect key="frame" x="16" y="245" width="36" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="JqV-si-aSt"/>
                                         </constraints>
@@ -1266,7 +1294,7 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHF-Wv-q3S">
-                                        <rect key="frame" x="16" y="289" width="56" height="22"/>
+                                        <rect key="frame" x="16" y="275" width="56" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="6au-dV-H5P"/>
                                         </constraints>
@@ -1275,7 +1303,7 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(021) 999991234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5H-fq-vJM">
-                                        <rect key="frame" x="80" y="289" width="205" height="22"/>
+                                        <rect key="frame" x="80" y="275" width="205" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="205" id="A0H-ib-OsY"/>
                                         </constraints>
@@ -1284,7 +1312,7 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emergency Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9b-2w-cfM">
-                                        <rect key="frame" x="16" y="319" width="151" height="22"/>
+                                        <rect key="frame" x="16" y="305" width="151" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="Xgp-Qs-gPd"/>
                                         </constraints>
@@ -1311,19 +1339,19 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hY-ze-mxV">
-                                        <rect key="frame" x="192.5" y="199" width="58" height="22"/>
+                                        <rect key="frame" x="192.5" y="185" width="58" height="22"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" text="Rua Marquês de São Vicente, 255" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="M8X-a1-lHD">
-                                        <rect key="frame" x="84" y="229" width="275" height="22"/>
+                                        <rect key="frame" x="84" y="215" width="275" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="YyO-2w-C55">
-                                        <rect key="frame" x="106.5" y="407" width="162.5" height="56"/>
+                                        <rect key="frame" x="106.5" y="449" width="162.5" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="HdY-sf-06f"/>
                                         </constraints>
@@ -1356,7 +1384,7 @@ All you need to do is send them the code below.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(---) ---------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5V-Vw-1xp">
-                                        <rect key="frame" x="175" y="319" width="184" height="22"/>
+                                        <rect key="frame" x="175" y="305" width="184" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="184" id="aEw-VB-4IB"/>
                                         </constraints>
@@ -1376,7 +1404,7 @@ All you need to do is send them the code below.</string>
                                     <constraint firstItem="M8X-a1-lHD" firstAttribute="leading" secondItem="nuc-yi-yZ5" secondAttribute="trailing" constant="8" id="4A9-fT-Hlw"/>
                                     <constraint firstAttribute="trailing" secondItem="LVk-P0-RDl" secondAttribute="trailing" constant="16" id="4m2-hi-xLl"/>
                                     <constraint firstItem="l5V-Vw-1xp" firstAttribute="leading" secondItem="m9b-2w-cfM" secondAttribute="trailing" constant="8" id="5w7-W9-1bq"/>
-                                    <constraint firstItem="Ase-Rq-0SC" firstAttribute="top" secondItem="Ubw-IF-soG" secondAttribute="bottom" constant="34" id="6QU-Eo-dGB"/>
+                                    <constraint firstItem="Ase-Rq-0SC" firstAttribute="top" secondItem="Ubw-IF-soG" secondAttribute="bottom" constant="20" id="6QU-Eo-dGB"/>
                                     <constraint firstItem="P5H-fq-vJM" firstAttribute="leading" secondItem="kHF-Wv-q3S" secondAttribute="trailing" constant="8" id="7ai-5l-RRn"/>
                                     <constraint firstItem="m9b-2w-cfM" firstAttribute="leading" secondItem="c1r-Nu-Hrh" secondAttribute="leading" constant="16" id="8RJ-jv-cnD"/>
                                     <constraint firstAttribute="trailing" secondItem="QW8-6d-z3U" secondAttribute="trailing" id="93e-lW-5JO"/>
@@ -1386,7 +1414,7 @@ All you need to do is send them the code below.</string>
                                     <constraint firstItem="nuc-yi-yZ5" firstAttribute="leading" secondItem="c1r-Nu-Hrh" secondAttribute="leading" constant="16" id="DIf-zC-SKL"/>
                                     <constraint firstItem="0hY-ze-mxV" firstAttribute="centerY" secondItem="lKJ-3M-F1h" secondAttribute="centerY" id="Dmi-Ns-jhL"/>
                                     <constraint firstItem="nuc-yi-yZ5" firstAttribute="centerY" secondItem="M8X-a1-lHD" secondAttribute="centerY" id="FdG-o9-Eog"/>
-                                    <constraint firstItem="6Pd-Op-e4L" firstAttribute="top" secondItem="m9b-2w-cfM" secondAttribute="bottom" constant="24" id="Gbi-j1-DNO"/>
+                                    <constraint firstItem="6Pd-Op-e4L" firstAttribute="top" secondItem="m9b-2w-cfM" secondAttribute="bottom" constant="80" id="Gbi-j1-DNO"/>
                                     <constraint firstItem="YyO-2w-C55" firstAttribute="centerX" secondItem="c1r-Nu-Hrh" secondAttribute="centerX" id="HoO-PY-75l"/>
                                     <constraint firstItem="lKJ-3M-F1h" firstAttribute="width" secondItem="z6A-46-p2y" secondAttribute="width" id="Hyg-bT-Bex"/>
                                     <constraint firstItem="Q6P-21-kfz" firstAttribute="centerY" secondItem="0hY-ze-mxV" secondAttribute="centerY" id="IAr-eC-3nC"/>
@@ -1466,10 +1494,10 @@ All you need to do is send them the code below.</string>
             </objects>
             <point key="canvasLocation" x="1904.8" y="488.90554722638683"/>
         </scene>
-        <!--Main Caretaker View Controller-->
+        <!--Monitoring View Controller-->
         <scene sceneID="cfL-u3-B8z">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="S0I-Hz-CFn" customClass="MainCaretakerViewController" customModule="Neri" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="S0I-Hz-CFn" customClass="MonitoringViewController" customModule="Neri" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IbT-3o-4do"/>
                         <viewControllerLayoutGuide type="bottom" id="Ar9-TW-Y0k"/>
@@ -1492,6 +1520,9 @@ All you need to do is send them the code below.</string>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="8" minY="5" maxX="0.0" maxY="5"/>
                                                 <state key="normal" image="phone"/>
+                                                <connections>
+                                                    <action selector="callButtonPressed:" destination="S0I-Hz-CFn" eventType="touchUpInside" id="867-Va-p8i"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GaL-59-b0Q">
                                                 <rect key="frame" x="16" y="56.5" width="298" height="29"/>
@@ -1513,6 +1544,9 @@ All you need to do is send them the code below.</string>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="24" maxY="18"/>
                                                 <state key="normal" image="arrow left"/>
+                                                <connections>
+                                                    <action selector="backButtonPressed:" destination="S0I-Hz-CFn" eventType="touchUpInside" id="BVe-E4-Q4b"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYq-hg-bon">
                                                 <rect key="frame" x="319" y="8" width="40" height="40"/>
@@ -1523,7 +1557,7 @@ All you need to do is send them the code below.</string>
                                                 <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="18"/>
                                                 <state key="normal" image="info"/>
                                                 <connections>
-                                                    <segue destination="dXo-uH-lm5" kind="presentation" id="6ft-lP-sVr"/>
+                                                    <action selector="infoButtonPressed:" destination="S0I-Hz-CFn" eventType="touchUpInside" id="E7H-FR-KDZ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1696,10 +1730,15 @@ All you need to do is send them the code below.</string>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <outlet property="elderAge" destination="mz3-dX-1zm" id="KZ6-0q-1uD"/>
-                        <outlet property="elderName" destination="GaL-59-b0Q" id="UUh-Qo-aOi"/>
-                        <outlet property="heartRateLabel" destination="vzK-vM-IXc" id="AEl-As-W3z"/>
+                        <outlet property="ageLabel" destination="mz3-dX-1zm" id="m0b-V4-xes"/>
+                        <outlet property="heartRateLabel" destination="vzK-vM-IXc" id="gZ4-dq-goM"/>
+                        <outlet property="heartRateView" destination="d7J-aa-wpt" id="TsT-Rx-HTo"/>
                         <outlet property="map" destination="eea-RG-zfA" id="m97-jS-98u"/>
+                        <outlet property="motionImage" destination="GLe-XY-UAY" id="uki-xW-VXE"/>
+                        <outlet property="motionLabel" destination="oti-Sz-CaE" id="yx4-WL-6fy"/>
+                        <outlet property="motionView" destination="W4k-to-lHz" id="Ch9-7P-A8H"/>
+                        <outlet property="nameLabel" destination="GaL-59-b0Q" id="0uC-9L-ZH8"/>
+                        <segue destination="dXo-uH-lm5" kind="presentation" identifier="showElderInfo" id="91U-iy-G7z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3C7-NO-R64" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1709,7 +1748,7 @@ All you need to do is send them the code below.</string>
         <!--Elder Info View Controller-->
         <scene sceneID="E7v-wP-dfs">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="dXo-uH-lm5" customClass="ElderInfoViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="dXo-uH-lm5" customClass="ElderInfoViewController" customModule="Neri" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vDe-sQ-0Y6"/>
                         <viewControllerLayoutGuide type="bottom" id="vRK-Zq-XDX"/>
@@ -1728,7 +1767,7 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Date of birth:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLD-hb-7e4">
-                                        <rect key="frame" x="16" y="169" width="105" height="22"/>
+                                        <rect key="frame" x="16" y="155" width="105" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="rLz-fp-nCJ"/>
                                         </constraints>
@@ -1737,7 +1776,7 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/08/1946" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7h-ob-dbn">
-                                        <rect key="frame" x="129" y="169" width="140" height="22"/>
+                                        <rect key="frame" x="129" y="155" width="140" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="zKv-aP-qzB"/>
                                         </constraints>
@@ -1746,7 +1785,7 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rio de Janeiro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qX-2d-3d0">
-                                        <rect key="frame" x="60" y="259" width="170" height="22"/>
+                                        <rect key="frame" x="60" y="245" width="170" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="170" id="Laa-ZG-e5K"/>
                                         </constraints>
@@ -1755,19 +1794,19 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="63 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aa-4l-cws">
-                                        <rect key="frame" x="85" y="199" width="100.5" height="22"/>
+                                        <rect key="frame" x="85" y="185" width="100.5" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1,62 m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76W-Ov-lRK">
-                                        <rect key="frame" x="258.5" y="199" width="100.5" height="22"/>
+                                        <rect key="frame" x="258.5" y="185" width="100.5" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ov7-iO-qsi">
-                                        <rect key="frame" x="16" y="199" width="61" height="22"/>
+                                        <rect key="frame" x="16" y="185" width="61" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="sr5-gQ-gfB"/>
                                         </constraints>
@@ -1776,7 +1815,7 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adress:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwC-BY-02g">
-                                        <rect key="frame" x="16" y="229" width="60" height="22"/>
+                                        <rect key="frame" x="16" y="215" width="60" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="Zxr-hw-LCf"/>
                                         </constraints>
@@ -1785,7 +1824,7 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="City:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1A2-Kb-6i7">
-                                        <rect key="frame" x="16" y="259" width="36" height="22"/>
+                                        <rect key="frame" x="16" y="245" width="36" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="53n-Pd-IBD"/>
                                         </constraints>
@@ -1794,7 +1833,7 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y44-t5-PTI">
-                                        <rect key="frame" x="16" y="289" width="56" height="22"/>
+                                        <rect key="frame" x="16" y="275" width="56" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="THc-hf-VVM"/>
                                         </constraints>
@@ -1803,7 +1842,7 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(021) 999991234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udJ-ie-CTf">
-                                        <rect key="frame" x="80" y="289" width="205" height="22"/>
+                                        <rect key="frame" x="80" y="275" width="205" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="205" id="IBb-ya-Mdl"/>
                                         </constraints>
@@ -1819,6 +1858,9 @@ All you need to do is send them the code below.</string>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="24" maxY="18"/>
                                         <state key="normal" image="arrow left"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="dXo-uH-lm5" eventType="touchUpInside" id="zjW-5m-8xk"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIr-js-HJw">
                                         <rect key="frame" x="16" y="113" width="343" height="22"/>
@@ -1827,13 +1869,13 @@ All you need to do is send them the code below.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lg-60-YJC">
-                                        <rect key="frame" x="192.5" y="199" width="58" height="22"/>
+                                        <rect key="frame" x="192.5" y="185" width="58" height="22"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" text="Rua Marquês de São Vicente, 255" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5Ln-YL-5TY">
-                                        <rect key="frame" x="84" y="229" width="275" height="22"/>
+                                        <rect key="frame" x="84" y="215" width="275" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -1866,7 +1908,7 @@ All you need to do is send them the code below.</string>
                                     <constraint firstItem="1A2-Kb-6i7" firstAttribute="centerY" secondItem="5qX-2d-3d0" secondAttribute="centerY" id="Vkr-AL-MWV"/>
                                     <constraint firstItem="76W-Ov-lRK" firstAttribute="leading" secondItem="3lg-60-YJC" secondAttribute="trailing" constant="8" id="aB7-fy-c8G"/>
                                     <constraint firstItem="ov7-iO-qsi" firstAttribute="centerY" secondItem="3aa-4l-cws" secondAttribute="centerY" id="dg5-gG-f9p"/>
-                                    <constraint firstItem="OLD-hb-7e4" firstAttribute="top" secondItem="NIr-js-HJw" secondAttribute="bottom" constant="34" id="e51-Af-bWc"/>
+                                    <constraint firstItem="OLD-hb-7e4" firstAttribute="top" secondItem="NIr-js-HJw" secondAttribute="bottom" constant="20" id="e51-Af-bWc"/>
                                     <constraint firstItem="Y44-t5-PTI" firstAttribute="top" secondItem="1A2-Kb-6i7" secondAttribute="bottom" constant="8" id="exz-Hc-bzg"/>
                                     <constraint firstItem="udJ-ie-CTf" firstAttribute="leading" secondItem="Y44-t5-PTI" secondAttribute="trailing" constant="8" id="gW5-Qs-GN2"/>
                                     <constraint firstItem="NIr-js-HJw" firstAttribute="top" secondItem="psX-hv-ITd" secondAttribute="bottom" constant="8" id="kbe-HE-Our"/>
@@ -1904,6 +1946,16 @@ All you need to do is send them the code below.</string>
                             <constraint firstAttribute="trailing" secondItem="l0M-UQ-rim" secondAttribute="trailing" id="tbv-dh-cWC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="5Ln-YL-5TY" id="1x9-2K-r3W"/>
+                        <outlet property="ageLabel" destination="NIr-js-HJw" id="Zle-ce-pNP"/>
+                        <outlet property="birthdayLabel" destination="r7h-ob-dbn" id="7Ar-sY-KGP"/>
+                        <outlet property="cityLabel" destination="5qX-2d-3d0" id="Myt-Ji-R0R"/>
+                        <outlet property="heightLabel" destination="76W-Ov-lRK" id="N4w-VF-KYp"/>
+                        <outlet property="nameLabel" destination="psX-hv-ITd" id="4TE-ec-bJe"/>
+                        <outlet property="phoneLabel" destination="udJ-ie-CTf" id="BOM-kC-mcl"/>
+                        <outlet property="weightLabel" destination="3aa-4l-cws" id="KW0-V9-SEj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HiE-EA-dsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

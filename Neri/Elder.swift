@@ -29,10 +29,7 @@ class Elder {
     private init() {}
     
     func age() -> Int {
-        let now = Date()
-        let calendar = Calendar.current
-        let ageComponents = calendar.dateComponents([.year], from: self.birthday, to: now)
-        return ageComponents.year!
+        DateHelper.age(from: self.birthday)
     }
     
     func pairingCodeIsValid() -> Bool {

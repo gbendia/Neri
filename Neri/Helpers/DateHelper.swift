@@ -3,6 +3,13 @@ import Foundation
 class DateHelper {
     private init() {}
     
+    static func age(from birthday: Date) -> Int {
+        let now = Date()
+        let calendar = Calendar.current
+        let ageComponents = calendar.dateComponents([.year], from: birthday, to: now)
+        return ageComponents.year!
+    }
+    
     static func dateFrom(string: String, format: String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format

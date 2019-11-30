@@ -17,13 +17,13 @@ class MainElderViewController: UIViewController, ElderMonitorDelegate {
     @IBOutlet weak var map: MKMapView!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         nameLabel.text = Elder.singleton.name
         ageLabel.text = "\(Elder.singleton.age()) years"
         
         monitor.setDelegate(delegate: self)
         monitor.start()
-        
-        super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -2,12 +2,7 @@ import Foundation
 
 class CaregiverDAO: NeriDAO {
     
-    let dao = CaregiverDAO()
-    
-    private override init() {}
-    
     private static var caregiverID: String? = nil
-    
     private static let CAREGIVER_COLLECTION = "caregivers"
     
     static func createCaregiver(completionHandler: @escaping () -> Void = {}) {

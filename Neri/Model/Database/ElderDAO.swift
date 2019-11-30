@@ -3,8 +3,6 @@ import UIKit
 
 class ElderDAO: NeriDAO {
     
-    private override init() {}
-    
     private static var elderID: String? = nil
     private static let ELDER_COLLECTION = "elders"
     
@@ -22,8 +20,8 @@ class ElderDAO: NeriDAO {
                                        "location": ["latitude": Elder.singleton.latitude,
                                                     "longitude": Elder.singleton.longitude],
                                        "fallDetected": Elder.singleton.fallDetected,
-                                       "pairingCode": ["code": Elder.singleton.pairingCode,
-                                                       "codeCreatedAt": DateHelper.stringFrom(date: Elder.singleton.codeCreatedAt, as: DateHelper.DATE_TIME_FORMAT)]]
+                                       "pairingCode": Elder.singleton.pairingCode,
+                                       "codeCreatedAt": DateHelper.stringFrom(date: Elder.singleton.codeCreatedAt, as: DateHelper.DATE_TIME_FORMAT)]
         
         let documentID = save(collection: ELDER_COLLECTION, data: elderData, completionHandler: completionHandler)
         if (documentID != nil) {
@@ -47,33 +45,40 @@ class ElderDAO: NeriDAO {
                                            "location": ["latitude": Elder.singleton.latitude,
                                                         "longitude": Elder.singleton.longitude],
                                            "fallDetected": Elder.singleton.fallDetected,
-                                           "pairingCode": ["code": Elder.singleton.pairingCode,
-                                                           "codeCreatedAt": DateHelper.stringFrom(date: Elder.singleton.codeCreatedAt, as: DateHelper.DATE_TIME_FORMAT)]]
+                                           "pairingCode": Elder.singleton.pairingCode,
+                                           "codeCreatedAt": DateHelper.stringFrom(date: Elder.singleton.codeCreatedAt, as: DateHelper.DATE_TIME_FORMAT)]
             
             update(collection: ELDER_COLLECTION, data: elderData, id: elderID!, completionHandler: completionHandler)
         }
     }
     
-    static func getElder(id: String? = elderID, completionHandler: @escaping () -> Void = {}) {
+    static func getElder(id: String? = elderID, completionHandler: @escaping ([String: Any]) -> Void = { _ in }) {
         if (id != nil) {
             getDocumentByID(collection: ELDER_COLLECTION, id: id!, completionHandler: { elderDocument in
                 self.setElderSingletonAttributes(from: elderDocument)
-                completionHandler()
+                completionHandler(elderDocument)
             })
         }
     }
     
     static func findElderWith(pairingCode code: String, completionHandler: @escaping (String) -> Void = {_ in }, onInvalidCode: @escaping () -> Void = {}) {
         queryDocumentByField(collection: ELDER_COLLECTION, queryField: "pairingCode", queryValue: code) { elderDocuments in
+            if (elderDocuments.count == 0) {
+                onInvalidCode()
+                return
+            }
             for document in elderDocuments {
-                let codeCreatedAt = DateHelper.dateFrom(string: (document["pairingCode"] as! [String: Any])["codeCreatedAt"] as! String, format: DateHelper.DATE_TIME_FORMAT)
+                print("Elder with [ID: \(document["documentID"] ?? "ID NOT FOUND")] has code [pairingCode: \(document["pairingCode"] ?? "CODE NOT FOUND")]")
+                let codeCreatedAt = DateHelper.dateFrom(string: document["codeCreatedAt"] as! String, format: DateHelper.DATE_TIME_FORMAT)
                 if (Elder.singleton.pairingCodeIsValid(codeCreatedAt: codeCreatedAt)) {
                     self.elderID = document["documentID"] as? String
                     self.setElderSingletonAttributes(from: document)
                     if (Elder.singleton.pairingCodeIsValid()) {
+                        print("Pairing code valid!")
                         self.saveIDLocally()
                         completionHandler(elderID!)
                     } else {
+                        print("Pairing code expired!")
                         onInvalidCode()
                     }
                 }
@@ -101,12 +106,11 @@ class ElderDAO: NeriDAO {
         Elder.singleton.fallDetected = document["fallDetected"] as! Bool
         
         // Setting pairing code information
-        let pairingCode = document["pairingCode"] as! [String: String]
-        Elder.singleton.pairingCode = pairingCode["code"]!
-        Elder.singleton.codeCreatedAt = DateHelper.dateFrom(string: pairingCode["codeCreatedAt"]!, format: DateHelper.DATE_TIME_FORMAT)
+        Elder.singleton.pairingCode = document["pairingCode"] as! String
+        Elder.singleton.codeCreatedAt = DateHelper.dateFrom(string: document["codeCreatedAt"] as! String, format: DateHelper.DATE_TIME_FORMAT)
     }
     
-    private static func saveIDLocally() {
+    static func saveIDLocally() {
         let defaults = UserDefaults.standard
         defaults.set(elderID, forKey: "currentElderID")
     }
@@ -116,7 +120,7 @@ class ElderDAO: NeriDAO {
         if let elderID = defaults.string(forKey: "currentElderID") {
             print("Found elder with [ID:\(elderID)]")
             self.elderID = elderID
-            self.getElder {
+            self.getElder { _ in
                 onSuccess()
             }
             return

@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2A7368C3F4EA70EBD59F92F1 /* Pods_Neri_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA0EFF7AD2C38CD25D4EA58 /* Pods_Neri_WatchKit_App.framework */; };
+		6519A32A23923B5400D62FC6 /* MonitoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519A32923923B5400D62FC6 /* MonitoringViewController.swift */; };
+		6519A32C2392404800D62FC6 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519A32B2392404800D62FC6 /* LocationHelper.swift */; };
+		6519A32E2392430000D62FC6 /* ElderInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519A32D2392430000D62FC6 /* ElderInfoViewController.swift */; };
 		652DF2D8232EF0360067BB01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF2D7232EF0360067BB01 /* AppDelegate.swift */; };
-		652DF2DA232EF0360067BB01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF2D9232EF0360067BB01 /* ViewController.swift */; };
 		652DF2DF232EF0380067BB01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652DF2DE232EF0380067BB01 /* Assets.xcassets */; };
 		652DF2E2232EF0380067BB01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652DF2E0232EF0380067BB01 /* LaunchScreen.storyboard */; };
 		652DF2ED232EF0380067BB01 /* PairingCodeGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF2EC232EF0380067BB01 /* PairingCodeGeneratorTests.swift */; };
@@ -46,7 +48,7 @@
 		6554D0772390DEAC00973C7E /* LocationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0762390DEAC00973C7E /* LocationMonitor.swift */; };
 		6554D0792390DEBD00973C7E /* MotionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0782390DEBD00973C7E /* MotionMonitor.swift */; };
 		6554D07B2390E19000973C7E /* EditElderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D07A2390E19000973C7E /* EditElderViewController.swift */; };
-		65BB66CC23919B8700E7B8D5 /* EldersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB66CB23919B8700E7B8D5 /* EldersCollectionViewCell.swift */; };
+		65BB66CC23919B8700E7B8D5 /* EldersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB66CB23919B8700E7B8D5 /* EldersTableViewCell.swift */; };
 		65BB66CE23919FEF00E7B8D5 /* CaregiverDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB66CD23919FEF00E7B8D5 /* CaregiverDAO.swift */; };
 		65F358292388E1CB003A09B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65F358282388E1CB003A09B6 /* GoogleService-Info.plist */; };
 		65F3582B238CC8FD003A09B6 /* PairingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3582A238CC8FD003A09B6 /* PairingViewController.swift */; };
@@ -123,9 +125,11 @@
 		3C2542DEFB82EF08F637399E /* Pods-NeriTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeriTests.release.xcconfig"; path = "Target Support Files/Pods-NeriTests/Pods-NeriTests.release.xcconfig"; sourceTree = "<group>"; };
 		45263F77DD84CADE6529CEE1 /* Pods-NeriTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeriTests.debug.xcconfig"; path = "Target Support Files/Pods-NeriTests/Pods-NeriTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4ED32ACEBF3171416445C0BF /* Pods_NeriUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeriUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6519A32923923B5400D62FC6 /* MonitoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringViewController.swift; sourceTree = "<group>"; };
+		6519A32B2392404800D62FC6 /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
+		6519A32D2392430000D62FC6 /* ElderInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElderInfoViewController.swift; sourceTree = "<group>"; };
 		652DF2D4232EF0360067BB01 /* Neri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		652DF2D7232EF0360067BB01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		652DF2D9232EF0360067BB01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		652DF2DE232EF0380067BB01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		652DF2E1232EF0380067BB01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		652DF2E3232EF0380067BB01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -170,7 +174,7 @@
 		6554D0762390DEAC00973C7E /* LocationMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMonitor.swift; sourceTree = "<group>"; };
 		6554D0782390DEBD00973C7E /* MotionMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionMonitor.swift; sourceTree = "<group>"; };
 		6554D07A2390E19000973C7E /* EditElderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditElderViewController.swift; sourceTree = "<group>"; };
-		65BB66CB23919B8700E7B8D5 /* EldersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldersCollectionViewCell.swift; sourceTree = "<group>"; };
+		65BB66CB23919B8700E7B8D5 /* EldersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldersTableViewCell.swift; sourceTree = "<group>"; };
 		65BB66CD23919FEF00E7B8D5 /* CaregiverDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaregiverDAO.swift; sourceTree = "<group>"; };
 		65F358282388E1CB003A09B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65F3582A238CC8FD003A09B6 /* PairingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingViewController.swift; sourceTree = "<group>"; };
@@ -260,7 +264,6 @@
 				652DF32F232EF33E0067BB01 /* View */,
 				652DF330232EF3470067BB01 /* Controller */,
 				652DF2D7232EF0360067BB01 /* AppDelegate.swift */,
-				652DF2D9232EF0360067BB01 /* ViewController.swift */,
 				652DF32D232EF2010067BB01 /* Resources */,
 				652DF2E3232EF0380067BB01 /* Info.plist */,
 				65F358282388E1CB003A09B6 /* GoogleService-Info.plist */,
@@ -335,7 +338,7 @@
 				652DF2E0232EF0380067BB01 /* LaunchScreen.storyboard */,
 				652DF337232EFD6E0067BB01 /* Main.storyboard */,
 				652DF331232EF3690067BB01 /* GradientView.swift */,
-				65BB66CB23919B8700E7B8D5 /* EldersCollectionViewCell.swift */,
+				65BB66CB23919B8700E7B8D5 /* EldersTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				652FEE42238E15620093C718 /* PairingCodeGenerator.swift */,
 				652FEE59238F720B0093C718 /* GlobalConstants.swift */,
 				652FEE5B238F84D30093C718 /* DateHelper.swift */,
+				6519A32B2392404800D62FC6 /* LocationHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -420,6 +424,8 @@
 			children = (
 				65F3582A238CC8FD003A09B6 /* PairingViewController.swift */,
 				65F3582E238CC9C8003A09B6 /* EldersListViewController.swift */,
+				6519A32923923B5400D62FC6 /* MonitoringViewController.swift */,
+				6519A32D2392430000D62FC6 /* ElderInfoViewController.swift */,
 			);
 			path = Caregivers;
 			sourceTree = "<group>";
@@ -776,7 +782,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				652DF2DA232EF0360067BB01 /* ViewController.swift in Sources */,
 				652FEE51238F597C0093C718 /* Elder.swift in Sources */,
 				6554D0752390DE4700973C7E /* MonitorInterface.swift in Sources */,
 				652FEE53238F5DC80093C718 /* Caregiver.swift in Sources */,
@@ -796,11 +801,14 @@
 				652DF350232EFE240067BB01 /* LoadingViewController.swift in Sources */,
 				65F35831238CCB60003A09B6 /* BasicFormViewController.swift in Sources */,
 				6554D0772390DEAC00973C7E /* LocationMonitor.swift in Sources */,
+				6519A32A23923B5400D62FC6 /* MonitoringViewController.swift in Sources */,
 				652DF332232EF3690067BB01 /* GradientView.swift in Sources */,
 				652FEE4B238E308C0093C718 /* RandomNumberGenerator.swift in Sources */,
 				6554D0792390DEBD00973C7E /* MotionMonitor.swift in Sources */,
+				6519A32E2392430000D62FC6 /* ElderInfoViewController.swift in Sources */,
 				652DF34F232EFE240067BB01 /* InitialViewController.swift in Sources */,
-				65BB66CC23919B8700E7B8D5 /* EldersCollectionViewCell.swift in Sources */,
+				6519A32C2392404800D62FC6 /* LocationHelper.swift in Sources */,
+				65BB66CC23919B8700E7B8D5 /* EldersTableViewCell.swift in Sources */,
 				652FEE56238F5F520093C718 /* ElderDAO.swift in Sources */,
 				6554D0732390DE0F00973C7E /* HeartRateMonitor.swift in Sources */,
 				652FEE41238E12410093C718 /* Extensions.swift in Sources */,

@@ -44,8 +44,9 @@ class NeriDAO {
                 for document in querySnapshot!.documents {
                     var documentData = document.data()
                     documentData["documentID"] = document.documentID
-                    documents.append(document.data())
+                    documents.append(documentData)
                 }
+                print("Found \(documents.count) documents with [\(queryField): \(queryValue)]")
                 completionHandler(documents)
             }
         }

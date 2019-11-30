@@ -27,21 +27,14 @@ class PairingViewController: BasicFormViewController {
         return false
     }
     
-    private func hasValidPairingCode() -> Bool {
-        ElderDAO.findElderWith(pairingCode: pairingCodeTextField.text!, completionHandler: {_ in 
-            
-        }, onInvalidCode: {
-            
-        })
-        return false
-    }
-    
     private func hasValidPhoneNumber() -> Bool {
         return PhoneValidator.isValid(phoneNumberTextField.text!)
     }
     
-    private func finishPairing() {
-        CaregiverDAO.createCaregiver()
+    private func finishPairing(onSuccess: @escaping () -> Void) {
+        CaregiverDAO.createCaregiver {
+            onSuccess()
+        }
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
@@ -54,16 +47,8 @@ class PairingViewController: BasicFormViewController {
             return
         }
         
-        var invalidFields = [String]()
         if (!hasValidPhoneNumber()) {
-            invalidFields.append("\"Phone number\"")
-        }
-        if (!hasValidPairingCode()) {
-            invalidFields.append("\"Pairing code\"")
-        }
-        if (!invalidFields.isEmpty) {
-            showInvalidFieldAlert(for: invalidFields)
-            return
+            self.showInvalidFieldAlert(for: ["\"Phone number\""])
         }
         
         loadingView.isHidden = false
@@ -72,16 +57,17 @@ class PairingViewController: BasicFormViewController {
         ElderDAO.findElderWith(pairingCode: pairingCodeTextField.text!, completionHandler: { elderID in
             Caregiver.singleton.phoneNumber = self.phoneNumberTextField.text!
             Caregiver.singleton.connectedEldersIDs.append(elderID)
-            self.loadingView.isHidden = true
-            self.activityIndicator.isHidden = true
-            self.performSegue(withIdentifier: "goToEldersView", sender: self)
+            
+            self.finishPairing {
+                self.loadingView.isHidden = true
+                self.activityIndicator.isHidden = true
+                self.performSegue(withIdentifier: "goToEldersView", sender: self)
+            }
         }, onInvalidCode: {
             self.loadingView.isHidden = true
             self.activityIndicator.isHidden = true
             self.showInvalidFieldAlert(for: ["\"Pairing code\""])
         })
-        
-        
     }
     
 }
