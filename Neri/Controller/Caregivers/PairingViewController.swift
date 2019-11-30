@@ -12,6 +12,9 @@ class PairingViewController: BasicFormViewController {
         super.viewDidLoad()
         hideKeyboardWhenTappingOutsideTextField()
         
+        phoneNumberTextField.attributedPlaceholder = NSAttributedString(string: phoneNumberTextField.placeholder!, attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+        pairingCodeTextField.attributedPlaceholder = NSAttributedString(string: pairingCodeTextField.placeholder!, attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+        
         loadingView.isHidden = true
         activityIndicator.isHidden = true
     }
