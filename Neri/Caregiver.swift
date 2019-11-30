@@ -24,7 +24,6 @@ class Caregiver {
     
     func connect(with elderID: String, completionHandler: @escaping () -> Void) {
         ElderDAO.getElder(id: elderID, completionHandler: { _ in
-            ElderDAO.saveIDLocally()
             completionHandler()
         })
     }

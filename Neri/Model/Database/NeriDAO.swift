@@ -22,7 +22,7 @@ class NeriDAO {
         return ref?.documentID
     }
     
-    static func getDocumentByID(collection: String, id: String, completionHandler: @escaping ([String: Any]) -> Void) {
+    static func getDocumentByID(collection: String, id: String, completionHandler: @escaping ([String: Any]) -> Void, onFailure: @escaping () -> Void) {
         let docRef = db.collection(collection).document(id)
         
         docRef.getDocument { (document, error) in
@@ -31,6 +31,7 @@ class NeriDAO {
                 completionHandler(data)
             } else {
                 print("Document with [ID: \(id)] does not exist on [collection: \(collection)]")
+                onFailure()
             }
         }
     }

@@ -7,10 +7,14 @@ class LoadingViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        ElderDAO.getCurrentElder(onSuccess: {
-            self.performSegue(withIdentifier: "showElder", sender: self)
+        CaregiverDAO.getCurrentCaregiver(onSuccess: {
+            self.performSegue(withIdentifier: "showElderList", sender: self)
         }, onFailure: {
-            self.performSegue(withIdentifier: "showInitial", sender: self)
+            ElderDAO.getCurrentElder(onSuccess: {
+                self.performSegue(withIdentifier: "showElder", sender: self)
+            }, onFailure: {
+                self.performSegue(withIdentifier: "showInitial", sender: self)
+            })
         })
     }
     

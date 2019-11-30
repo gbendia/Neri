@@ -42,7 +42,7 @@
                     <connections>
                         <segue destination="lfJ-h6-DjB" kind="presentation" identifier="showElder" id="KcL-gv-czi"/>
                         <segue destination="P9o-eb-crH" kind="presentation" identifier="showInitial" id="C5g-cG-RTk"/>
-                        <segue destination="Wa5-LR-ftC" kind="presentation" id="TJj-KL-ViZ"/>
+                        <segue destination="Wa5-LR-ftC" kind="presentation" identifier="showElderList" id="rhU-0I-DrR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ykJ-D6-wUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1099,7 +1099,7 @@ All you need to do is send them the code below.</string>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="151" id="t1r-xa-dRz"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1640,7 +1640,7 @@ All you need to do is send them the code below.</string>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="151" id="EUI-Tg-19e"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1977,7 +1977,7 @@ All you need to do is send them the code below.</string>
         <image name="walking" width="57" height="94"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uNt-vX-bDR"/>
+        <segue reference="KcL-gv-czi"/>
         <segue reference="4Mt-Tv-gv3"/>
     </inferredMetricsTieBreakers>
 </document>

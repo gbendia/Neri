@@ -52,11 +52,14 @@ class ElderDAO: NeriDAO {
         }
     }
     
-    static func getElder(id: String? = elderID, completionHandler: @escaping ([String: Any]) -> Void = { _ in }) {
+    static func getElder(id: String? = elderID, completionHandler: @escaping ([String: Any]) -> Void = { _ in }, onFailure: @escaping () -> Void = {}) {
         if (id != nil) {
             getDocumentByID(collection: ELDER_COLLECTION, id: id!, completionHandler: { elderDocument in
+                self.elderID = id
                 self.setElderSingletonAttributes(from: elderDocument)
                 completionHandler(elderDocument)
+            }, onFailure: {
+                onFailure()
             })
         }
     }
@@ -120,9 +123,11 @@ class ElderDAO: NeriDAO {
         if let elderID = defaults.string(forKey: "currentElderID") {
             print("Found elder with [ID:\(elderID)]")
             self.elderID = elderID
-            self.getElder { _ in
+            self.getElder (completionHandler: { _ in
                 onSuccess()
-            }
+            }, onFailure: {
+                onFailure()
+            })
             return
         } else {
             print("No elder currently selected")

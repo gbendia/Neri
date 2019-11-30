@@ -12,7 +12,9 @@ class EldersListViewController: BasicFormViewController, UITableViewDataSource, 
         
         eldersTableView.delegate = self
         eldersTableView.dataSource = self
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         loadConnectedEldersInfo()
     }
     
@@ -20,12 +22,12 @@ class EldersListViewController: BasicFormViewController, UITableViewDataSource, 
         self.eldersNames = [String]()
         self.eldersAges = [Int]()
         for id in Caregiver.singleton.connectedEldersIDs {
-            ElderDAO.getElder(id: id) { elderDict in
+            ElderDAO.getElder(id: id, completionHandler: { elderDict in
                 self.eldersNames.append(elderDict["name"] as! String)
                 let birthdayDate = DateHelper.dateFrom(string: elderDict["birthday"] as! String, format: DateHelper.DATE_ONLY_FORMAT)
                 self.eldersAges.append(DateHelper.age(from: birthdayDate))
                 self.eldersTableView.reloadData()
-            }
+            })
         }
     }
     

@@ -25,11 +25,13 @@ class CaregiverDAO: NeriDAO {
         }
     }
     
-    static func getCaregiver(completionHandler: @escaping () -> Void = {}) {
+    static func getCaregiver(completionHandler: @escaping () -> Void = {}, onFailure: @escaping () -> Void = {}) {
         if (caregiverID != nil) {
             getDocumentByID(collection: CAREGIVER_COLLECTION, id: caregiverID!, completionHandler: { caregiverDocument in
                 self.setCaregiverSingletonAttributes(from: caregiverDocument)
                 completionHandler()
+            }, onFailure: {
+                onFailure()
             })
         }
     }
@@ -49,9 +51,11 @@ class CaregiverDAO: NeriDAO {
         if let caregiverID = defaults.string(forKey: "currentCaregiverID") {
             print("Found caregiver with [ID:\(caregiverID)]")
             self.caregiverID = caregiverID
-            self.getCaregiver {
+            self.getCaregiver(completionHandler: {
                 onSuccess()
-            }
+            }, onFailure: {
+                onFailure()
+            })
             return
         } else {
             print("No caregiver currently logged")
