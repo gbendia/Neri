@@ -127,7 +127,7 @@ class EditElderViewController: BasicFormViewController {
         endEditing()
         
         Elder.singleton.birthday = DateHelper.dateFrom(string: birthdayLabel.text!, format: DateHelper.DATE_ONLY_FORMAT)
-        ageLabel.text = String(Elder.singleton.age())
+        ageLabel.text = "\(Elder.singleton.age()) years"
         Elder.singleton.weight = weightLabel.text!
         Elder.singleton.height = heightLabel.text!
         Elder.singleton.address = streetLabel.text!
