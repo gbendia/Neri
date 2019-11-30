@@ -1,17 +1,8 @@
-//
-//  InterfaceController.swift
-//  Neri WatchKit Extension
-//
-//  Created by Gabriel Bendia on 15/09/19.
-//  Copyright © 2019 Gabriel Bendia. All rights reserved.
-//
-
-import WatchKit
 import Foundation
+import WatchKit
 
-
-class InterfaceController: WKInterfaceController {
-
+class BaseInterfaceController: WKInterfaceController {
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -27,5 +18,5 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
 }

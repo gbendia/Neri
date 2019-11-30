@@ -11,6 +11,7 @@
 		6519A32A23923B5400D62FC6 /* MonitoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519A32923923B5400D62FC6 /* MonitoringViewController.swift */; };
 		6519A32C2392404800D62FC6 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519A32B2392404800D62FC6 /* LocationHelper.swift */; };
 		6519A32E2392430000D62FC6 /* ElderInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519A32D2392430000D62FC6 /* ElderInfoViewController.swift */; };
+		6519A3302392FA5A00D62FC6 /* BaseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519A32F2392FA5A00D62FC6 /* BaseInterfaceController.swift */; };
 		652DF2D8232EF0360067BB01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF2D7232EF0360067BB01 /* AppDelegate.swift */; };
 		652DF2DF232EF0380067BB01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652DF2DE232EF0380067BB01 /* Assets.xcassets */; };
 		652DF2E2232EF0380067BB01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652DF2E0232EF0380067BB01 /* LaunchScreen.storyboard */; };
@@ -20,7 +21,7 @@
 		652DF303232EF0380067BB01 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652DF301232EF0380067BB01 /* Interface.storyboard */; };
 		652DF305232EF0380067BB01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652DF304232EF0380067BB01 /* Assets.xcassets */; };
 		652DF30C232EF0380067BB01 /* Neri WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 652DF30B232EF0380067BB01 /* Neri WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		652DF311232EF0380067BB01 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF310232EF0380067BB01 /* InterfaceController.swift */; };
+		652DF311232EF0380067BB01 /* HeartRateInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF310232EF0380067BB01 /* HeartRateInterfaceController.swift */; };
 		652DF313232EF0380067BB01 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF312232EF0380067BB01 /* ExtensionDelegate.swift */; };
 		652DF315232EF0380067BB01 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DF314232EF0380067BB01 /* NotificationController.swift */; };
 		652DF317232EF0390067BB01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652DF316232EF0390067BB01 /* Assets.xcassets */; };
@@ -128,6 +129,7 @@
 		6519A32923923B5400D62FC6 /* MonitoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringViewController.swift; sourceTree = "<group>"; };
 		6519A32B2392404800D62FC6 /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		6519A32D2392430000D62FC6 /* ElderInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElderInfoViewController.swift; sourceTree = "<group>"; };
+		6519A32F2392FA5A00D62FC6 /* BaseInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterfaceController.swift; sourceTree = "<group>"; };
 		652DF2D4232EF0360067BB01 /* Neri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		652DF2D7232EF0360067BB01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		652DF2DE232EF0380067BB01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,7 +146,7 @@
 		652DF304232EF0380067BB01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		652DF306232EF0380067BB01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652DF30B232EF0380067BB01 /* Neri WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Neri WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		652DF310232EF0380067BB01 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		652DF310232EF0380067BB01 /* HeartRateInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateInterfaceController.swift; sourceTree = "<group>"; };
 		652DF312232EF0380067BB01 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		652DF314232EF0380067BB01 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		652DF316232EF0390067BB01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -303,7 +305,8 @@
 		652DF30F232EF0380067BB01 /* Neri WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				652DF310232EF0380067BB01 /* InterfaceController.swift */,
+				6519A32F2392FA5A00D62FC6 /* BaseInterfaceController.swift */,
+				652DF310232EF0380067BB01 /* HeartRateInterfaceController.swift */,
 				652DF312232EF0380067BB01 /* ExtensionDelegate.swift */,
 				652DF314232EF0380067BB01 /* NotificationController.swift */,
 				652DF316232EF0390067BB01 /* Assets.xcassets */,
@@ -838,9 +841,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6519A3302392FA5A00D62FC6 /* BaseInterfaceController.swift in Sources */,
 				652DF315232EF0380067BB01 /* NotificationController.swift in Sources */,
 				652DF313232EF0380067BB01 /* ExtensionDelegate.swift in Sources */,
-				652DF311232EF0380067BB01 /* InterfaceController.swift in Sources */,
+				652DF311232EF0380067BB01 /* HeartRateInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15505" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="B9A-xL-bds">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFCompactText-Regular.otf">
+            <string>.SFCompactText-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
-            <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="220" y="345"/>
-        </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>
@@ -23,25 +23,108 @@
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
                         <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
-                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="220" y="675"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Neri_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="497" y="675"/>
         </scene>
-        <!--Notification Controller-->
-        <scene sceneID="Niz-AI-uX2">
+        <!--Heart Rate Interface Controller-->
+        <scene sceneID="Tld-Sb-8uv">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="B9A-xL-bds" customClass="HeartRateInterfaceController" customModule="Neri_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="141" alignment="center" verticalAlignment="center" backgroundImage="watch-heart" contentMode="scaleAspectFit" layout="vertical" id="t3p-v7-89V">
+                            <items>
+                                <label width="136" height="43" alignment="center" verticalAlignment="center" text="--" textAlignment="center" id="OoM-3e-t7P">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" pointSize="42"/>
+                                </label>
+                                <label width="80" height="22" alignment="center" verticalAlignment="center" text="bpm" textAlignment="center" id="lVw-gb-01G">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <segue destination="Omz-2a-3NZ" kind="relationship" relationship="nextPage" id="ZhB-uh-m0D"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="9sS-sQ-Q8Z">
+            <objects>
+                <controller id="Omz-2a-3NZ">
+                    <items>
+                        <group width="1" height="109" alignment="center" verticalAlignment="bottom" backgroundImage="watch-standing" contentMode="scaleAspectFit" id="Aa5-rs-cUJ"/>
+                        <group width="1" alignment="left" verticalAlignment="bottom" id="hck-uU-rQQ">
+                            <items>
+                                <label height="22" alignment="center" text="Normal motion data" textAlignment="center" id="Xxh-cR-BgH">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <segue destination="pdG-o1-O6Y" kind="relationship" relationship="nextPage" id="g65-n6-YN5"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="497" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Noz-eU-xMn">
+            <objects>
+                <controller id="pdG-o1-O6Y">
+                    <items>
+                        <map height="1" alignment="left" id="kgw-iX-5u5"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="769" y="345"/>
+        </scene>
+        <!--CountdownInterfaceController-->
+        <scene sceneID="Qxx-ac-trc">
+            <objects>
+                <controller identifier="CountdownInterfaceController" id="zt5-X6-lgF">
+                    <items>
+                        <group width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" layout="vertical" id="5JQ-Zz-Pau">
+                            <items>
+                                <button width="1" height="1" alignment="left" title="I'm OK" id="I8I-Qb-o6b">
+                                    <color key="backgroundColor" red="0.33725490200000002" green="0.78823529410000004" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </button>
+                            </items>
+                        </group>
+                        <group alignment="center" layout="vertical" id="ne1-qD-Khj">
+                            <items>
+                                <label alignment="center" text="Fall detected!" textAlignment="center" id="Xkd-Wv-Xwy"/>
+                            </items>
+                        </group>
+                        <group height="78" alignment="center" layout="vertical" id="fes-wA-dgp">
+                            <items>
+                                <label height="55" alignment="center" verticalAlignment="center" text="30" textAlignment="center" id="dyV-hR-JSg">
+                                    <color key="textColor" red="1" green="0.66274509800000003" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name=".SFCompactText-Regular" family=".SF Compact Text" pointSize="50"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1048" y="345"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="watch-heart" width="235" height="223"/>
+        <image name="watch-standing" width="37" height="96"/>
+    </resources>
 </document>
