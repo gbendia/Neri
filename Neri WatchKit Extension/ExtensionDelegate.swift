@@ -1,11 +1,3 @@
-//
-//  ExtensionDelegate.swift
-//  Neri WatchKit Extension
-//
-//  Created by Gabriel Bendia on 15/09/19.
-//  Copyright © 2019 Gabriel Bendia. All rights reserved.
-//
-
 import WatchKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
