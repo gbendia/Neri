@@ -63,11 +63,11 @@ class MonitoringViewController: UIViewController {
     }
     
     private func updateMotion() {
-        DispatchQueue.main.async{
+        DispatchQueue.main.async {
             if (Elder.singleton.fallDetected) {
                 self.motionImage.image = UIImage(named: "alert")
                 self.motionLabel.text = "Fall detected!"
-                self.motionView.backgroundColor = UIColor(red: 255, green: 169, blue: 155, alpha: 1)
+                self.motionView.backgroundColor = UIColor(red: 255/255, green: 119/255, blue: 105/255, alpha: 1)
             } else {
                 self.motionImage.image = UIImage(named: "standing")
                 self.motionLabel.text = "Normal motion data"

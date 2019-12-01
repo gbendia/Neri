@@ -6,9 +6,9 @@ class HeartRateInterfaceController: BaseInterfaceController, HeartRateDelegate {
     @IBOutlet weak var heartRateLabel: WKInterfaceLabel!
     
     override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-        
         HeartRateMeter.singleton.setHeartRateDelegate(self)
+        
+        super.awake(withContext: context)
     }
     
     override func willActivate() {
@@ -16,9 +16,7 @@ class HeartRateInterfaceController: BaseInterfaceController, HeartRateDelegate {
     }
     
     func heartRateUpdated(heartRate: Int) {
-        print("Heart rate updated")
         if (HeartRateMeter.singleton.isActive()) {
-            print("Sending heart rate")
             ConnectivitySession.singleton.sendData("heartRate", heartRate)
             heartRateLabel.setText("\(heartRate)")
         } else {

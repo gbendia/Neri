@@ -28,10 +28,9 @@ class ConnectivitySession: NSObject, WCSessionDelegate {
             return
         }
         
+        print("Sending [\(key): \(value)]")
         let dataToBeSent: [String: Any] = [key: value]
-        print("Will send data")
         connectivitySession.transferUserInfo(dataToBeSent)
-        print("Data sent")
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {

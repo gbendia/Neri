@@ -123,8 +123,6 @@ class HeartRateMeter: NSObject, HKWorkoutSessionDelegate {
             guard let sample = heartRateSamples.first else{return}
             let heartRate = Int(sample.quantity.doubleValue(for: self.heartRateUnit))
             self.heartRateDelegate!.heartRateUpdated(heartRate: heartRate)
-            
-            ConnectivitySession.singleton.sendData("heartRate", heartRate)
         }
     }
     

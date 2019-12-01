@@ -4,23 +4,24 @@ import HealthKit
 import CoreMotion
 import WatchConnectivity
 
-class BaseInterfaceController: WKInterfaceController {
-    
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-        
-        HeartRateMeter.singleton.startFetching()
+class BaseInterfaceController: WKInterfaceController, MotionMeterDelegate {
+
+    override func willActivate() {
+        super.willActivate()
+        DispatchQueue(label: "HeartRateQueue").async {
+            HeartRateMeter.singleton.startFetching()
+        }
+        DispatchQueue(label: "MotionQueue").async {
+            MotionMeter.singleton.setDelegate(self)
+            MotionMeter.singleton.startFetching()
+        }
         ConnectivitySession.singleton.startConnection()
     }
     
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-    
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
+    func fallDetected() {
+        DispatchQueue.main.async { [weak self] in
+            self?.presentController(withName: "countdownInterfaceController", context: self)
+        }
     }
         
 }

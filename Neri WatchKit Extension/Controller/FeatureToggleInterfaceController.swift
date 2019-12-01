@@ -9,6 +9,7 @@ class FeatureToggleInterfaceController: WKInterfaceController {
     }
     
     @IBAction func toggleMotionDataPressed() {
+        MotionMeter.singleton.toggle()
     }
     
 }

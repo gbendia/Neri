@@ -87,7 +87,7 @@ class MainElderViewController: UIViewController, NeriWatchConnectivityDelegate, 
     }
     
     func fallDetectedDidChange() {
-        print("fall detected did change")
+        setMotionDataView()
     }
     
     func didReceiveHeartRate(_ heartRate: Int) {
@@ -117,6 +117,8 @@ class MainElderViewController: UIViewController, NeriWatchConnectivityDelegate, 
             return
         }
         
+        Elder.singleton.fallDetected = fallDetected
+        ElderDAO.updateElder()
         fallDetectedDidChange()
     }
     

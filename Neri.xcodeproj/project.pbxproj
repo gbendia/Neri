@@ -49,10 +49,9 @@
 		6554D0712390DD7300973C7E /* ElderMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0702390DD7300973C7E /* ElderMonitor.swift */; };
 		6554D0732390DE0F00973C7E /* HeartRateMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0722390DE0F00973C7E /* HeartRateMonitor.swift */; };
 		6554D0772390DEAC00973C7E /* LocationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0762390DEAC00973C7E /* LocationMonitor.swift */; };
-		6554D0792390DEBD00973C7E /* MotionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0782390DEBD00973C7E /* MotionMonitor.swift */; };
 		6554D07B2390E19000973C7E /* EditElderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D07A2390E19000973C7E /* EditElderViewController.swift */; };
 		65790AD12394140600124A72 /* WatchConncetivityReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65790AD02394140600124A72 /* WatchConncetivityReceiver.swift */; };
-		65790AD3239416F900124A72 /* BaseElderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65790AD2239416F900124A72 /* BaseElderViewController.swift */; };
+		65790AD723943D8E00124A72 /* CountdownInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65790AD623943D8E00124A72 /* CountdownInterfaceController.swift */; };
 		65B89A2423937BBF00DE5B97 /* HeartRateMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B89A2323937BBF00DE5B97 /* HeartRateMeter.swift */; };
 		65B89A262393836300DE5B97 /* FeatureToggleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B89A252393836300DE5B97 /* FeatureToggleInterfaceController.swift */; };
 		65B89A2A2394067800DE5B97 /* MotionMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B89A292394067800DE5B97 /* MotionMeter.swift */; };
@@ -185,10 +184,9 @@
 		6554D0702390DD7300973C7E /* ElderMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElderMonitor.swift; sourceTree = "<group>"; };
 		6554D0722390DE0F00973C7E /* HeartRateMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateMonitor.swift; sourceTree = "<group>"; };
 		6554D0762390DEAC00973C7E /* LocationMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMonitor.swift; sourceTree = "<group>"; };
-		6554D0782390DEBD00973C7E /* MotionMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionMonitor.swift; sourceTree = "<group>"; };
 		6554D07A2390E19000973C7E /* EditElderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditElderViewController.swift; sourceTree = "<group>"; };
 		65790AD02394140600124A72 /* WatchConncetivityReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConncetivityReceiver.swift; sourceTree = "<group>"; };
-		65790AD2239416F900124A72 /* BaseElderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseElderViewController.swift; sourceTree = "<group>"; };
+		65790AD623943D8E00124A72 /* CountdownInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownInterfaceController.swift; sourceTree = "<group>"; };
 		65B89A2323937BBF00DE5B97 /* HeartRateMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateMeter.swift; sourceTree = "<group>"; };
 		65B89A252393836300DE5B97 /* FeatureToggleInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureToggleInterfaceController.swift; sourceTree = "<group>"; };
 		65B89A292394067800DE5B97 /* MotionMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionMeter.swift; sourceTree = "<group>"; };
@@ -424,7 +422,6 @@
 				6554D0702390DD7300973C7E /* ElderMonitor.swift */,
 				6554D0722390DE0F00973C7E /* HeartRateMonitor.swift */,
 				6554D0762390DEAC00973C7E /* LocationMonitor.swift */,
-				6554D0782390DEBD00973C7E /* MotionMonitor.swift */,
 				65790AD02394140600124A72 /* WatchConncetivityReceiver.swift */,
 			);
 			path = Monitoring;
@@ -445,6 +442,7 @@
 			children = (
 				6519A32F2392FA5A00D62FC6 /* BaseInterfaceController.swift */,
 				652DF310232EF0380067BB01 /* HeartRateInterfaceController.swift */,
+				65790AD623943D8E00124A72 /* CountdownInterfaceController.swift */,
 				65B89A252393836300DE5B97 /* FeatureToggleInterfaceController.swift */,
 				652DF314232EF0380067BB01 /* NotificationController.swift */,
 			);
@@ -458,7 +456,6 @@
 				652FEE4E238E363C0093C718 /* PairingCodeViewController.swift */,
 				6554D06A2390D75300973C7E /* MainElderViewController.swift */,
 				6554D07A2390E19000973C7E /* EditElderViewController.swift */,
-				65790AD2239416F900124A72 /* BaseElderViewController.swift */,
 			);
 			path = Elders;
 			sourceTree = "<group>";
@@ -849,7 +846,6 @@
 				6519A32A23923B5400D62FC6 /* MonitoringViewController.swift in Sources */,
 				652DF332232EF3690067BB01 /* GradientView.swift in Sources */,
 				652FEE4B238E308C0093C718 /* RandomNumberGenerator.swift in Sources */,
-				6554D0792390DEBD00973C7E /* MotionMonitor.swift in Sources */,
 				6519A32E2392430000D62FC6 /* ElderInfoViewController.swift in Sources */,
 				652DF34F232EFE240067BB01 /* InitialViewController.swift in Sources */,
 				6519A32C2392404800D62FC6 /* LocationHelper.swift in Sources */,
@@ -858,7 +854,6 @@
 				6554D0732390DE0F00973C7E /* HeartRateMonitor.swift in Sources */,
 				652FEE41238E12410093C718 /* Extensions.swift in Sources */,
 				65790AD12394140600124A72 /* WatchConncetivityReceiver.swift in Sources */,
-				65790AD3239416F900124A72 /* BaseElderViewController.swift in Sources */,
 				65F35833238CD62A003A09B6 /* Validators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -889,6 +884,7 @@
 				6519A3302392FA5A00D62FC6 /* BaseInterfaceController.swift in Sources */,
 				652DF315232EF0380067BB01 /* NotificationController.swift in Sources */,
 				652DF313232EF0380067BB01 /* ExtensionDelegate.swift in Sources */,
+				65790AD723943D8E00124A72 /* CountdownInterfaceController.swift in Sources */,
 				65B89A2423937BBF00DE5B97 /* HeartRateMeter.swift in Sources */,
 				65B89A2A2394067800DE5B97 /* MotionMeter.swift in Sources */,
 				6546A41523940C9E00A87639 /* ConnectivitySession.swift in Sources */,

@@ -107,15 +107,18 @@
             </objects>
             <point key="canvasLocation" x="769" y="345"/>
         </scene>
-        <!--CountdownInterfaceController-->
+        <!--countdownInterfaceController-->
         <scene sceneID="Qxx-ac-trc">
             <objects>
-                <controller identifier="CountdownInterfaceController" id="zt5-X6-lgF">
+                <controller identifier="countdownInterfaceController" id="zt5-X6-lgF" customClass="CountdownInterfaceController" customModule="Neri_WatchKit_Extension">
                     <items>
                         <group width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" layout="vertical" id="5JQ-Zz-Pau">
                             <items>
                                 <button width="1" height="1" alignment="left" title="I'm OK" id="I8I-Qb-o6b">
                                     <color key="backgroundColor" red="0.33725490200000002" green="0.78823529410000004" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="okButtonPressed" destination="zt5-X6-lgF" id="RSt-oR-slh"/>
+                                    </connections>
                                 </button>
                             </items>
                         </group>
@@ -133,6 +136,9 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="countDownLabel" destination="dyV-hR-JSg" id="uVd-3R-ljm"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="1048" y="345"/>
