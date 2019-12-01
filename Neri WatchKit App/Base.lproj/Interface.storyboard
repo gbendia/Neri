@@ -7,7 +7,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="SFCompactText-Regular.otf">
+        <array key="TimesNewRoman.ttf">
             <string>.SFCompactText-Regular</string>
         </array>
     </customFonts>
@@ -53,6 +53,7 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="heartRateLabel" destination="OoM-3e-t7P" id="hsN-BD-DYb"/>
                         <segue destination="Omz-2a-3NZ" kind="relationship" relationship="nextPage" id="ZhB-uh-m0D"/>
                     </connections>
                 </controller>
@@ -81,12 +82,26 @@
             </objects>
             <point key="canvasLocation" x="497" y="345"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Feature Toggle Interface Controller-->
         <scene sceneID="Noz-eU-xMn">
             <objects>
-                <controller id="pdG-o1-O6Y">
+                <controller id="pdG-o1-O6Y" customClass="FeatureToggleInterfaceController" customModule="Neri_WatchKit_Extension">
                     <items>
-                        <map height="1" alignment="left" id="kgw-iX-5u5"/>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="8VC-ek-NJC">
+                            <items>
+                                <label width="1" alignment="left" accessibilityValue="Test" text="Toggle monitoring" textAlignment="center" numberOfLines="2" id="SEK-dA-K8y"/>
+                                <button width="1" alignment="left" title="Heart Rate" id="D6l-9Y-shF">
+                                    <connections>
+                                        <action selector="toggleHeartRatePressed" destination="pdG-o1-O6Y" id="sSF-RE-VQ5"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Motion Data" id="Z6d-ki-hTg">
+                                    <connections>
+                                        <action selector="toggleMotionDataPressed" destination="pdG-o1-O6Y" id="7Ck-1t-dPN"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
                 </controller>
             </objects>

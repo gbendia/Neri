@@ -1,22 +1,25 @@
 import WatchKit
 import Foundation
 
-class HeartRateInterfaceController: WKInterfaceController {
+class HeartRateInterfaceController: BaseInterfaceController, HeartRateDelegate {
 
+    @IBOutlet weak var heartRateLabel: WKInterfaceLabel!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        HeartRateMeter.singleton.setHeartRateDelegate(self)
     }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        heartRateLabel.setText("--")
     }
     
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
+    func heartRateUpdated(heartRate: Int) {
+        heartRateLabel.setText("\(heartRate)")
+        // Send to iPhone
     }
 
 }

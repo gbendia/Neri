@@ -1,12 +1,14 @@
 import Foundation
 import WatchKit
+import HealthKit
+import CoreMotion
 
 class BaseInterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        HeartRateMeter.singleton.startFetching()
     }
     
     override func willActivate() {
@@ -18,5 +20,5 @@ class BaseInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    
+        
 }
