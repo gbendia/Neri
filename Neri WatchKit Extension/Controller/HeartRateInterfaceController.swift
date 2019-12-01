@@ -13,13 +13,17 @@ class HeartRateInterfaceController: BaseInterfaceController, HeartRateDelegate {
     
     override func willActivate() {
         super.willActivate()
-        
-        heartRateLabel.setText("--")
     }
     
     func heartRateUpdated(heartRate: Int) {
-        heartRateLabel.setText("\(heartRate)")
-        // Send to iPhone
+        print("Heart rate updated")
+        if (HeartRateMeter.singleton.isActive()) {
+            print("Sending heart rate")
+            ConnectivitySession.singleton.sendData("heartRate", heartRate)
+            heartRateLabel.setText("\(heartRate)")
+        } else {
+            heartRateLabel.setText("--")
+        }
     }
 
 }

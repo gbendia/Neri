@@ -51,26 +51,28 @@ class MonitoringViewController: UIViewController {
     private func updateHeartRate() {
         print("Updating heart rate")
         if (Elder.singleton.heartRate > -1) {
-            if (HeartRateMonitor().dangerousHeartRate(for: Elder.singleton)) {
-                heartRateView.backgroundColor = .red
-                heartRateLabel.textColor = .red
-            } else {
-                heartRateView.backgroundColor = .clear
-                heartRateLabel.textColor = UIColor(displayP3Red: 63, green: 144, blue: 159, alpha: 1)
+            DispatchQueue.main.async {
+                if (HeartRateMonitor().hasDangerousHeartRate(for: Elder.singleton)) {
+                    self.heartRateView.backgroundColor = UIColor(red: 255/255, green: 119/255, blue: 105/255, alpha: 1)
+                } else {
+                    self.heartRateView.backgroundColor = .clear
+                }
+                self.heartRateLabel.text = String(Elder.singleton.heartRate)
             }
-            heartRateLabel.text = String(Elder.singleton.heartRate)
         }
     }
     
     private func updateMotion() {
-        if (Elder.singleton.fallDetected) {
-            motionImage.image = UIImage(named: "alert")
-            motionLabel.text = "Fall detected!"
-            motionView.backgroundColor = UIColor.red
-        } else {
-            motionImage.image = UIImage(named: "standing")
-            motionLabel.text = "Normal motion data"
-            motionView.backgroundColor = UIColor.clear
+        DispatchQueue.main.async{
+            if (Elder.singleton.fallDetected) {
+                self.motionImage.image = UIImage(named: "alert")
+                self.motionLabel.text = "Fall detected!"
+                self.motionView.backgroundColor = UIColor(red: 255, green: 169, blue: 155, alpha: 1)
+            } else {
+                self.motionImage.image = UIImage(named: "standing")
+                self.motionLabel.text = "Normal motion data"
+                self.motionView.backgroundColor = UIColor.clear
+            }
         }
     }
     

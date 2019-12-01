@@ -44,15 +44,18 @@
 		652FEE5A238F720B0093C718 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE59238F720B0093C718 /* GlobalConstants.swift */; };
 		652FEE5C238F84D30093C718 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE5B238F84D30093C718 /* DateHelper.swift */; };
 		652FEE5E238F86C40093C718 /* DateHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FEE5D238F86C40093C718 /* DateHelperTests.swift */; };
+		6546A41523940C9E00A87639 /* ConnectivitySession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6546A41423940C9E00A87639 /* ConnectivitySession.swift */; };
 		6554D06B2390D75300973C7E /* MainElderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D06A2390D75300973C7E /* MainElderViewController.swift */; };
 		6554D0712390DD7300973C7E /* ElderMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0702390DD7300973C7E /* ElderMonitor.swift */; };
 		6554D0732390DE0F00973C7E /* HeartRateMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0722390DE0F00973C7E /* HeartRateMonitor.swift */; };
-		6554D0752390DE4700973C7E /* MonitorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0742390DE4700973C7E /* MonitorInterface.swift */; };
 		6554D0772390DEAC00973C7E /* LocationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0762390DEAC00973C7E /* LocationMonitor.swift */; };
 		6554D0792390DEBD00973C7E /* MotionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D0782390DEBD00973C7E /* MotionMonitor.swift */; };
 		6554D07B2390E19000973C7E /* EditElderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554D07A2390E19000973C7E /* EditElderViewController.swift */; };
+		65790AD12394140600124A72 /* WatchConncetivityReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65790AD02394140600124A72 /* WatchConncetivityReceiver.swift */; };
+		65790AD3239416F900124A72 /* BaseElderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65790AD2239416F900124A72 /* BaseElderViewController.swift */; };
 		65B89A2423937BBF00DE5B97 /* HeartRateMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B89A2323937BBF00DE5B97 /* HeartRateMeter.swift */; };
 		65B89A262393836300DE5B97 /* FeatureToggleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B89A252393836300DE5B97 /* FeatureToggleInterfaceController.swift */; };
+		65B89A2A2394067800DE5B97 /* MotionMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B89A292394067800DE5B97 /* MotionMeter.swift */; };
 		65BB66CC23919B8700E7B8D5 /* EldersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB66CB23919B8700E7B8D5 /* EldersTableViewCell.swift */; };
 		65BB66CE23919FEF00E7B8D5 /* CaregiverDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB66CD23919FEF00E7B8D5 /* CaregiverDAO.swift */; };
 		65F358292388E1CB003A09B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65F358282388E1CB003A09B6 /* GoogleService-Info.plist */; };
@@ -177,15 +180,18 @@
 		652FEE59238F720B0093C718 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		652FEE5B238F84D30093C718 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		652FEE5D238F86C40093C718 /* DateHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelperTests.swift; sourceTree = "<group>"; };
+		6546A41423940C9E00A87639 /* ConnectivitySession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivitySession.swift; sourceTree = "<group>"; };
 		6554D06A2390D75300973C7E /* MainElderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainElderViewController.swift; sourceTree = "<group>"; };
 		6554D0702390DD7300973C7E /* ElderMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElderMonitor.swift; sourceTree = "<group>"; };
 		6554D0722390DE0F00973C7E /* HeartRateMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateMonitor.swift; sourceTree = "<group>"; };
-		6554D0742390DE4700973C7E /* MonitorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorInterface.swift; sourceTree = "<group>"; };
 		6554D0762390DEAC00973C7E /* LocationMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMonitor.swift; sourceTree = "<group>"; };
 		6554D0782390DEBD00973C7E /* MotionMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionMonitor.swift; sourceTree = "<group>"; };
 		6554D07A2390E19000973C7E /* EditElderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditElderViewController.swift; sourceTree = "<group>"; };
+		65790AD02394140600124A72 /* WatchConncetivityReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConncetivityReceiver.swift; sourceTree = "<group>"; };
+		65790AD2239416F900124A72 /* BaseElderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseElderViewController.swift; sourceTree = "<group>"; };
 		65B89A2323937BBF00DE5B97 /* HeartRateMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateMeter.swift; sourceTree = "<group>"; };
 		65B89A252393836300DE5B97 /* FeatureToggleInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureToggleInterfaceController.swift; sourceTree = "<group>"; };
+		65B89A292394067800DE5B97 /* MotionMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionMeter.swift; sourceTree = "<group>"; };
 		65BB66CB23919B8700E7B8D5 /* EldersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldersTableViewCell.swift; sourceTree = "<group>"; };
 		65BB66CD23919FEF00E7B8D5 /* CaregiverDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaregiverDAO.swift; sourceTree = "<group>"; };
 		65F358282388E1CB003A09B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -318,12 +324,9 @@
 		652DF30F232EF0380067BB01 /* Neri WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				65B89A2323937BBF00DE5B97 /* HeartRateMeter.swift */,
-				6519A32F2392FA5A00D62FC6 /* BaseInterfaceController.swift */,
-				652DF310232EF0380067BB01 /* HeartRateInterfaceController.swift */,
-				65B89A252393836300DE5B97 /* FeatureToggleInterfaceController.swift */,
+				65B89A272394060400DE5B97 /* Model */,
+				65B89A282394061600DE5B97 /* Controller */,
 				652DF312232EF0380067BB01 /* ExtensionDelegate.swift */,
-				652DF314232EF0380067BB01 /* NotificationController.swift */,
 				652DF316232EF0390067BB01 /* Assets.xcassets */,
 				652DF318232EF0390067BB01 /* Info.plist */,
 				652DF319232EF0390067BB01 /* PushNotificationPayload.apns */,
@@ -420,11 +423,32 @@
 			children = (
 				6554D0702390DD7300973C7E /* ElderMonitor.swift */,
 				6554D0722390DE0F00973C7E /* HeartRateMonitor.swift */,
-				6554D0742390DE4700973C7E /* MonitorInterface.swift */,
 				6554D0762390DEAC00973C7E /* LocationMonitor.swift */,
 				6554D0782390DEBD00973C7E /* MotionMonitor.swift */,
+				65790AD02394140600124A72 /* WatchConncetivityReceiver.swift */,
 			);
 			path = Monitoring;
+			sourceTree = "<group>";
+		};
+		65B89A272394060400DE5B97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				65B89A2323937BBF00DE5B97 /* HeartRateMeter.swift */,
+				65B89A292394067800DE5B97 /* MotionMeter.swift */,
+				6546A41423940C9E00A87639 /* ConnectivitySession.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		65B89A282394061600DE5B97 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6519A32F2392FA5A00D62FC6 /* BaseInterfaceController.swift */,
+				652DF310232EF0380067BB01 /* HeartRateInterfaceController.swift */,
+				65B89A252393836300DE5B97 /* FeatureToggleInterfaceController.swift */,
+				652DF314232EF0380067BB01 /* NotificationController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		65F3582C238CC9A5003A09B6 /* Elders */ = {
@@ -434,6 +458,7 @@
 				652FEE4E238E363C0093C718 /* PairingCodeViewController.swift */,
 				6554D06A2390D75300973C7E /* MainElderViewController.swift */,
 				6554D07A2390E19000973C7E /* EditElderViewController.swift */,
+				65790AD2239416F900124A72 /* BaseElderViewController.swift */,
 			);
 			path = Elders;
 			sourceTree = "<group>";
@@ -804,7 +829,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				652FEE51238F597C0093C718 /* Elder.swift in Sources */,
-				6554D0752390DE4700973C7E /* MonitorInterface.swift in Sources */,
 				652FEE53238F5DC80093C718 /* Caregiver.swift in Sources */,
 				652FEE3E238E09960093C718 /* SignUpElderViewController.swift in Sources */,
 				652FEE4F238E363C0093C718 /* PairingCodeViewController.swift in Sources */,
@@ -833,6 +857,8 @@
 				652FEE56238F5F520093C718 /* ElderDAO.swift in Sources */,
 				6554D0732390DE0F00973C7E /* HeartRateMonitor.swift in Sources */,
 				652FEE41238E12410093C718 /* Extensions.swift in Sources */,
+				65790AD12394140600124A72 /* WatchConncetivityReceiver.swift in Sources */,
+				65790AD3239416F900124A72 /* BaseElderViewController.swift in Sources */,
 				65F35833238CD62A003A09B6 /* Validators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -864,6 +890,8 @@
 				652DF315232EF0380067BB01 /* NotificationController.swift in Sources */,
 				652DF313232EF0380067BB01 /* ExtensionDelegate.swift in Sources */,
 				65B89A2423937BBF00DE5B97 /* HeartRateMeter.swift in Sources */,
+				65B89A2A2394067800DE5B97 /* MotionMeter.swift in Sources */,
+				6546A41523940C9E00A87639 /* ConnectivitySession.swift in Sources */,
 				652DF311232EF0380067BB01 /* HeartRateInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

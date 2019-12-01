@@ -18,9 +18,9 @@ class Elder {
     
     // MARK: - Tracking Information
     var heartRate: Int = -1
+    var fallDetected: Bool = false
     var latitude: String = ""
     var longitude: String = ""
-    var fallDetected: Bool = false
     
     // MARK: - Pairing Code
     var pairingCode: String = ""

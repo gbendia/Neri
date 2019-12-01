@@ -16,7 +16,7 @@ class HeartRateMeter: NSObject, HKWorkoutSessionDelegate {
     private var workoutActive = false
     private var toggledWorkout = false
     
-    // define the activity type and location
+    // Define the activity type and location
     private var session: HKWorkoutSession?
     private let heartRateUnit = HKUnit(from: "count/min")
     private var anchor = HKQueryAnchor(fromValue: Int(HKAnchoredObjectQueryNoAnchor))
@@ -123,7 +123,8 @@ class HeartRateMeter: NSObject, HKWorkoutSessionDelegate {
             guard let sample = heartRateSamples.first else{return}
             let heartRate = Int(sample.quantity.doubleValue(for: self.heartRateUnit))
             self.heartRateDelegate!.heartRateUpdated(heartRate: heartRate)
-            // MANDAR PRO IPHONE SALVAR NO BANCO
+            
+            ConnectivitySession.singleton.sendData("heartRate", heartRate)
         }
     }
     
@@ -143,6 +144,10 @@ class HeartRateMeter: NSObject, HKWorkoutSessionDelegate {
             toggledWorkout = false
             startFetching()
         }
+    }
+    
+    func isActive() -> Bool {
+        return workoutActive
     }
     
     func setHeartRateDelegate(_ delegate: HeartRateDelegate) {

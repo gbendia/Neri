@@ -2,6 +2,7 @@ import Foundation
 import WatchKit
 import HealthKit
 import CoreMotion
+import WatchConnectivity
 
 class BaseInterfaceController: WKInterfaceController {
     
@@ -9,6 +10,7 @@ class BaseInterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         HeartRateMeter.singleton.startFetching()
+        ConnectivitySession.singleton.startConnection()
     }
     
     override func willActivate() {

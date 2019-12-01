@@ -1,7 +1,7 @@
 import Foundation
 import MapKit
 
-class LocationMonitor: NSObject, Monitor, CLLocationManagerDelegate {
+class LocationMonitor: NSObject, CLLocationManagerDelegate {
     
     private let locationManager: CLLocationManager
     private var delegate: LocationMonitorDelegate?

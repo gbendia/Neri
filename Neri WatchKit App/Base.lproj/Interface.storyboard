@@ -127,7 +127,7 @@
                         <group height="78" alignment="center" layout="vertical" id="fes-wA-dgp">
                             <items>
                                 <label height="55" alignment="center" verticalAlignment="center" text="30" textAlignment="center" id="dyV-hR-JSg">
-                                    <color key="textColor" red="1" green="0.66274509800000003" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="1" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" name=".SFCompactText-Regular" family=".SF Compact Text" pointSize="50"/>
                                 </label>
                             </items>

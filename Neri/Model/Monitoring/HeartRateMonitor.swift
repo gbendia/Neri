@@ -1,12 +1,8 @@
 import Foundation
 
-class HeartRateMonitor: Monitor {
+class HeartRateMonitor {
     
-    func start() {
-        
-    }
-    
-    func dangerousHeartRate(for elder: Elder) -> Bool {
+    func hasDangerousHeartRate(for elder: Elder) -> Bool {
         var isDangerous = false
         if (elder.heartRate >= 0) {
             isDangerous = dangerousHeartRateBy(age: elder.age(), heartRate: elder.heartRate)
@@ -44,7 +40,7 @@ class HeartRateMonitor: Monitor {
         } else if (age < 90) {
             min = 44
             max = 101
-        } else {
+        } else { // age >= 90
             min = 43
             max = 146
         }

@@ -1,6 +1,6 @@
 import Foundation
 
-class ElderMonitor: Monitor {
+class ElderMonitor {
     
     let locationMonitor = LocationMonitor()
     private var delegate: ElderMonitorDelegate?

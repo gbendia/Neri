@@ -2,9 +2,8 @@ import Foundation
 import UIKit
 import MapKit
 
-class MainElderViewController: UIViewController, ElderMonitorDelegate {
+class MainElderViewController: UIViewController, NeriWatchConnectivityDelegate, ElderMonitorDelegate {
     
-    var updateInfoTimer: Timer?
     let monitor = ElderMonitor()
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -24,44 +23,55 @@ class MainElderViewController: UIViewController, ElderMonitorDelegate {
         
         monitor.setDelegate(delegate: self)
         monitor.start()
+        
+        setMotionDataView()
+        
+        WatchConncetivityReceiver.singleton.setDelegate(self)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        updateInfoTimer = Timer.scheduledTimer(timeInterval: TimeInterval(ELDER_INFO_UPDATE_INTERVAL), target: self, selector: #selector(updateView), userInfo: nil, repeats: true)
-        
-        updateInfoTimer?.fire()
-        
-        super.viewWillAppear(animated)
+    private func setNilHeartRateView() {
+        DispatchQueue.main.async {
+            self.heartRateView.backgroundColor = .clear
+            self.heartRateLabel.text = "-"
+        }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        updateInfoTimer?.invalidate()
+    private func setNormalHeartRateView() {
+        if (Elder.singleton.heartRate < 0) {
+            return
+        }
         
-        super.viewDidDisappear(animated)
+        print("Should set normal heart rate to [\(Elder.singleton.heartRate)]")
+        DispatchQueue.main.async {
+            self.heartRateView.backgroundColor = .clear
+            self.heartRateLabel.text = String(Elder.singleton.heartRate)
+        }
     }
     
-    private func setHeartRateDataView() {
-        if (Elder.singleton.heartRate > -1) {
-            // Change to red if dangerous
-            heartRateLabel.text = String(Elder.singleton.heartRate)
+    private func setDangerousHeartRateView() {
+        if (Elder.singleton.heartRate < 0) {
+            return
+        }
+        
+        print("Should set dangerous heart rate")
+        DispatchQueue.main.async {
+            self.heartRateView.backgroundColor = UIColor(red: 255/255, green: 119/255, blue: 105/255, alpha: 1)
+            self.heartRateLabel.text = String(Elder.singleton.heartRate)
         }
     }
     
     private func setMotionDataView() {
-        if (Elder.singleton.fallDetected) {
-            motionImage.image = UIImage(named: "alert")
-            motionLabel.text = "Fall detected!"
-            motionView.backgroundColor = UIColor.red
-        } else {
-            motionImage.image = UIImage(named: "standing")
-            motionLabel.text = "Normal motion data"
-            motionView.backgroundColor = UIColor.clear
+        DispatchQueue.main.async {
+            if (Elder.singleton.fallDetected) {
+                self.motionImage.image = UIImage(named: "alert")
+                self.motionLabel.text = "Fall detected!"
+                self.motionView.backgroundColor = UIColor(red: 255/255, green: 119/255, blue: 105/255, alpha: 1)
+            } else {
+                self.motionImage.image = UIImage(named: "standing")
+                self.motionLabel.text = "Normal motion data"
+                self.motionView.backgroundColor = UIColor.clear
+            }
         }
-    }
-    
-    @objc private func updateView() {
-        setHeartRateDataView()
-        setMotionDataView()
     }
     
     func didUpdate(location: CLLocationCoordinate2D) {
@@ -74,6 +84,40 @@ class MainElderViewController: UIViewController, ElderMonitorDelegate {
             let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 300, longitudinalMeters: 300)
             self.map.setRegion(viewRegion, animated: false)
         })
+    }
+    
+    func fallDetectedDidChange() {
+        print("fall detected did change")
+    }
+    
+    func didReceiveHeartRate(_ heartRate: Int) {
+        if (heartRate == Elder.singleton.heartRate) {
+            return
+        }
+        
+        Elder.singleton.heartRate = heartRate
+        ElderDAO.updateElder()
+        
+        if (Elder.singleton.heartRate < 0) {
+            print("Setting nil heart rate")
+            setNilHeartRateView()
+        }
+        
+        if (HeartRateMonitor().hasDangerousHeartRate(for: Elder.singleton)) {
+            print("Setting dangerous heart rate")
+            setDangerousHeartRateView()
+        } else {
+            print("Setting normal heart rate")
+            setNormalHeartRateView()
+        }
+    }
+    
+    func didReceiveFallDetected(_ fallDetected: Bool) {
+        if (fallDetected == Elder.singleton.fallDetected) {
+            return
+        }
+        
+        fallDetectedDidChange()
     }
     
     @IBAction func callButtonPressed(_ sender: Any) {
