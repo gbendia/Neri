@@ -24,6 +24,19 @@ class MainElderViewController: UIViewController, NeriWatchConnectivityDelegate, 
         monitor.setDelegate(delegate: self)
         monitor.start()
         
+        if (Elder.singleton.heartRate < 0) {
+            print("Setting nil heart rate")
+            setNilHeartRateView()
+        }
+        
+        if (HeartRateMonitor().hasDangerousHeartRate(for: Elder.singleton)) {
+            print("Setting dangerous heart rate")
+            setDangerousHeartRateView()
+        } else {
+            print("Setting normal heart rate")
+            setNormalHeartRateView()
+        }
+        
         setMotionDataView()
         
         WatchConncetivityReceiver.singleton.setDelegate(self)
