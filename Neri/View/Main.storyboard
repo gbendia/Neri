@@ -652,15 +652,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krY-G5-o6T">
                                 <rect key="frame" x="0.0" y="182" width="375" height="485"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="0xR-fl-dv5">
-                                        <rect key="frame" x="16" y="8" width="343" height="50.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="51" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="0xR-fl-dv5">
+                                        <rect key="frame" x="16" y="8" width="343" height="51"/>
                                         <string key="text">Almost there! Inform your phone number so that the person you are connecting with can contact you anytime and type the pairing code.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="igk-gp-xxn">
-                                        <rect key="frame" x="16" y="88.5" width="343" height="30.5"/>
+                                        <rect key="frame" x="16" y="89" width="343" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -690,6 +690,9 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pairing code" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CCU-WQ-k1v">
                                         <rect key="frame" x="16" y="135" width="343" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="geX-jM-OBL"/>
+                                        </constraints>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="one-time-code"/>
@@ -733,10 +736,10 @@
                                     <constraint firstAttribute="width" constant="10" id="u7O-O3-qBb"/>
                                 </constraints>
                             </imageView>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1L-fm-RiU">
+                            <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1L-fm-RiU">
                                 <rect key="frame" x="-8" y="-13" width="391" height="693"/>
                                 <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="b7r-0A-ZY9">
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="b7r-0A-ZY9">
                                         <rect key="frame" x="177" y="328" width="37" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="b7r-0A-ZY9" secondAttribute="height" multiplier="1:1" id="6yc-wd-qAR"/>
@@ -755,7 +758,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.32156862749999998" green="0.80392156859999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="zKf-Lj-oTM" firstAttribute="top" secondItem="Hw5-DU-jcu" secondAttribute="bottom" constant="252" id="2Hr-v0-en5"/>
                             <constraint firstItem="nuH-Bi-hkS" firstAttribute="leading" secondItem="36j-Q9-biC" secondAttribute="leading" id="AqF-5e-sCS"/>
                             <constraint firstItem="nuH-Bi-hkS" firstAttribute="leading" secondItem="36j-Q9-biC" secondAttribute="leading" id="D17-AX-cc8"/>
                             <constraint firstAttribute="trailing" secondItem="nvY-Ol-Oyb" secondAttribute="trailing" id="Ftn-N1-qta"/>
