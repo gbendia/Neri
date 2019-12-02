@@ -154,7 +154,7 @@ class MotionMeter {
     private func evaluatingAxisOvertookCeilingValue() -> Bool {
         for array in axisToEvaluate {
             for value in array {
-                if (value > ACCELETOMETER_CEILING) {
+                if (abs(value) > ACCELETOMETER_CEILING) {
                     return true
                 }
             }
